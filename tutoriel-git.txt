@@ -16,6 +16,12 @@ Stager un fichier supprimé :
 git rm <nom du fichier>
 
 
+Déstager un fichier :
+---------------------
+
+git reset HEAD <nom du fichier>
+
+
 Commit :
 --------
 
@@ -32,3 +38,9 @@ Pull :
 ------
 
 git pull
+
+
+Voir ce qui a été modifié :
+----------------------------
+
+git status
