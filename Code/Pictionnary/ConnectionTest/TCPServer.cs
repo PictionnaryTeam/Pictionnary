@@ -2,12 +2,10 @@
 using ConnectionTest.Objects.Packets;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace ConnectionTest
 {
@@ -27,13 +25,23 @@ namespace ConnectionTest
         //Keep threads list for threads closing
         List<Thread> threadsList = new List<Thread>();
 
+        //Public
+        public string ServerIP { get => serverIP; set => serverIP = value; }
+        public IPAddress ServerAdress { get => serverAdress; set => serverAdress = value; }
+        public int ServerPort { get => serverPort; set => serverPort = value; }
 
 
         public TCPServer(String serverIP, int serverPort)
         {
+            if (serverIP == "localhost")
+            {
+                serverIP = NetworkHelper.GetLocalAdress();
+            }
+
             this.serverIP = serverIP;
             this.serverPort = serverPort;
         }
+
 
         public void Start()
         {
