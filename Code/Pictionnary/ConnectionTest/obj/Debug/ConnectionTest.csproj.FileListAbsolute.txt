@@ -1,0 +1,5 @@
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\ConnectionTest\bin\Debug\ConnectionTest.exe.config
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\ConnectionTest\bin\Debug\ConnectionTest.exe
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\ConnectionTest\bin\Debug\ConnectionTest.pdb
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\ConnectionTest\obj\Debug\ConnectionTest.exe
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\ConnectionTest\obj\Debug\ConnectionTest.pdb
