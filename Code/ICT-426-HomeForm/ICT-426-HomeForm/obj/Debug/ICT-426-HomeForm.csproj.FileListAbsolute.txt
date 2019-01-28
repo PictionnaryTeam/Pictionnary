@@ -1,0 +1,10 @@
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\obj\Debug\ICT-426-HomeForm.csprojResolveAssemblyReference.cache
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\obj\Debug\ICT_426_HomeForm.Properties.Resources.resources
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\obj\Debug\ICT-426-HomeForm.csproj.GenerateResource.Cache
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\obj\Debug\ICT-426-HomeForm.csproj.CoreCompileInputs.cache
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\bin\Debug\ICT-426-HomeForm.exe.config
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\bin\Debug\ICT-426-HomeForm.exe
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\bin\Debug\ICT-426-HomeForm.pdb
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\obj\Debug\ICT_426_HomeForm.frm_Home.resources
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\obj\Debug\ICT-426-HomeForm.exe
+D:\DATA\lopezes\ICT-426\ICT-426-HomeForm\ICT-426-HomeForm\obj\Debug\ICT-426-HomeForm.pdb
