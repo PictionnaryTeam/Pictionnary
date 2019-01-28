@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pictionnary", "Pictionnary\Pictionnary.csproj", "{CAA7E113-D488-4481-B969-367900190DDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionTest", "ConnectionTest\ConnectionTest.csproj", "{161C30B5-0F43-46E3-B8E5-77FB04B36CC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CAA7E113-D488-4481-B969-367900190DDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAA7E113-D488-4481-B969-367900190DDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAA7E113-D488-4481-B969-367900190DDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161C30B5-0F43-46E3-B8E5-77FB04B36CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161C30B5-0F43-46E3-B8E5-77FB04B36CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161C30B5-0F43-46E3-B8E5-77FB04B36CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161C30B5-0F43-46E3-B8E5-77FB04B36CC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
