@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype-SelonMaquettes", "Prototype-SelonMaquettes\Prototype-SelonMaquettes.csproj", "{312F3B75-C69E-4E48-A234-B77FC3D421CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{312F3B75-C69E-4E48-A234-B77FC3D421CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312F3B75-C69E-4E48-A234-B77FC3D421CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312F3B75-C69E-4E48-A234-B77FC3D421CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312F3B75-C69E-4E48-A234-B77FC3D421CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22016E13-B81E-4F89-8D38-0A0C752CACB6}
+	EndGlobalSection
+EndGlobal
