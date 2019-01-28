@@ -43,6 +43,12 @@ Pour supprimer un fichier :
 git rm <nom du fichier/du dossier>
 
 
+Déstager un fichier :
+---------------------
+
+git reset HEAD <nom du fichier>
+
+
 Commit (valider les modifications) :
 ------------------------------------
 
@@ -58,8 +64,8 @@ git pull
 Pousser les modif (après avoir commit)
 git push 
 
-
 Notes :
 -------
 
 /!\ Attention aux espaces dans les noms de fichiers ou de dossiers /!\
+

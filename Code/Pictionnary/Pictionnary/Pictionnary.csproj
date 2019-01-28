@@ -45,13 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Other\Constants.cs" />
+    <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="GameClasses\DrawOption.cs" />
+    <Compile Include="GameClasses\Game.cs" />
+    <Compile Include="GameClasses\GameManager.cs" />
+    <Compile Include="GameClasses\Theme.cs" />
+    <Compile Include="GameClasses\Timer.cs" />
+    <Compile Include="Other\Enumerations.cs" />
+    <Compile Include="PlayerClasses\Player.cs" />
+    <Compile Include="Other\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,5 +83,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
