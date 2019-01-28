@@ -1,0 +1,34 @@
+Clonage :
+---------
+
+git clone https://github.com/PictionnaryTeam/Pictionnary.git
+
+
+Stager un fichier ajouté :	// Stager un fichier veux dire de l'utiliser pour le prochain commit
+--------------------------
+
+git add <nom du fichier>
+
+
+Stager un fichier supprimé :
+----------------------------
+
+git rm <nom du fichier>
+
+
+Commit :
+--------
+
+git commit -m "message du commit"
+
+
+Push :
+------
+
+git push
+
+
+Pull :
+------
+
+git pull
