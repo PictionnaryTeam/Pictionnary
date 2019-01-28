@@ -1,34 +1,65 @@
 Clonage :
 ---------
 
-git clone https://github.com/PictionnaryTeam/Pictionnary.git
+Le clonage est à faire une seule fois.
+
+git clone <url> <dossier local>
+
+Pour ce projet :
+git clone https://github.com/PictionnaryTeam/Pictionnary.git <un dossier de votre choix>
 
 
-Stager un fichier ajouté :	// Stager un fichier veux dire de l'utiliser pour le prochain commit
---------------------------
+Dire à GIT dans quel dossier l'on travaille :
+---------------------------------------------
 
+Indiquer dans quel repository on travaille, c'est à dire le dossier dans lequel vous avez cloné le git pour la première fois.
+
+cd <chemin du dossier qui contient le .git>
+
+
+Voir l'état du git :
+--------------------
+
+Permet de savoir quels fichiers ont été modifiés/ajoutés depuis le dernier pull.
+
+git status
+
+
+Pour ajouter un fichier a un commit :
+-------------------------------------
+
+Une fois que vous avez ajouté ou modifié un fichier, il faut valider les modifications.
+
+Pour ajouter un fichier au commit (commit = ensemble des modifications qui n'ont pas encore été push)
 git add <nom du fichier>
 
+Cela fonctionne également avec les dossiers
+git add <nom du dossier>
 
-Stager un fichier supprimé :
+
+Pour supprimer un fichier :
 ----------------------------
 
-git rm <nom du fichier>
+git rm <nom du fichier/du dossier>
 
 
-Commit :
---------
+Commit (valider les modifications) :
+------------------------------------
 
 git commit -m "message du commit"
 
 
-Push :
-------
+Pour télécharger ou upload les modifications :
+----------------------------------------------
 
-git push
-
-
-Pull :
-------
-
+Tirer les modif
 git pull
+
+Pousser les modif (après avoir commit)
+git push 
+
+
+Notes :
+-------
+
+/!\ Attention aux espaces dans les noms de fichiers ou de dossiers /!\
