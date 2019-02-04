@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConnectionTest.Objects.Packets
+﻿namespace ConnectionTest.Objects.Packets
 {
     enum PacketType
     {
         CLIENTPACKETPING, SERVERPACKETPING,                    //PING PACKETS
-        SERVERPACKETCONFIRMATION
+        SERVERPACKETCONFIRMATION,                              //OK or KO
+        CLIENTPACKETPOINTS,                                    //Draw points
+        CLIENTREGISTER                                         //Register to the room master
     }
 }

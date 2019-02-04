@@ -18,6 +18,8 @@ namespace ConnectionTest.Managers
             packetHandlers = new Dictionary<PacketType, PacketReceiveHandler>();
 
             AddHandler(PacketType.CLIENTPACKETPING, new PingPacketHandler());
+            AddHandler(PacketType.CLIENTPACKETPOINTS, new PointsPacketHandler());
+            AddHandler(PacketType.CLIENTREGISTER, new RegisterPacketHandler());
         }
 
         public void AddHandler(PacketType packetType, PacketReceiveHandler handler)
