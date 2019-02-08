@@ -29,11 +29,17 @@
         private void InitializeComponent()
         {
             this.pnlMainPanel = new System.Windows.Forms.Panel();
+            this.btnCreateRoom = new System.Windows.Forms.Button();
             this.lbl_ParamGame = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkcomboboxThemes = new CheckComboBox.CheckComboBoxControl();
+            this.chkBoxInversedMouse = new System.Windows.Forms.CheckBox();
+            this.chkBoxContinuedWrite = new System.Windows.Forms.CheckBox();
+            this.chkBoxBlind = new System.Windows.Forms.CheckBox();
+            this.chkBoxClues = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.numUpDownTimeLimit = new System.Windows.Forms.NumericUpDown();
             this.cmbBoxGameDifficulty = new System.Windows.Forms.ComboBox();
-            this.cmbBoxGamesTheme = new System.Windows.Forms.ComboBox();
             this.lbl_GameTime = new System.Windows.Forms.Label();
             this.lblGameDifficulty = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,12 +56,6 @@
             this.lblMiddleLine = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlWhiteSpace = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.chkBoxClues = new System.Windows.Forms.CheckBox();
-            this.chkBoxBlind = new System.Windows.Forms.CheckBox();
-            this.chkBoxContinuedWrite = new System.Windows.Forms.CheckBox();
-            this.chkBoxInversedMouse = new System.Windows.Forms.CheckBox();
-            this.btnCreateRoom = new System.Windows.Forms.Button();
             this.pnlMainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownTimeLimit)).BeginInit();
@@ -78,6 +78,16 @@
             this.pnlMainPanel.Size = new System.Drawing.Size(601, 537);
             this.pnlMainPanel.TabIndex = 3;
             // 
+            // btnCreateRoom
+            // 
+            this.btnCreateRoom.Location = new System.Drawing.Point(234, 477);
+            this.btnCreateRoom.Name = "btnCreateRoom";
+            this.btnCreateRoom.Size = new System.Drawing.Size(116, 35);
+            this.btnCreateRoom.TabIndex = 18;
+            this.btnCreateRoom.Text = "Créer";
+            this.btnCreateRoom.UseVisualStyleBackColor = true;
+            this.btnCreateRoom.Click += new System.EventHandler(this.btnCreateRoom_Click);
+            // 
             // lbl_ParamGame
             // 
             this.lbl_ParamGame.AutoSize = true;
@@ -91,6 +101,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.chkcomboboxThemes);
             this.panel1.Controls.Add(this.chkBoxInversedMouse);
             this.panel1.Controls.Add(this.chkBoxContinuedWrite);
             this.panel1.Controls.Add(this.chkBoxBlind);
@@ -98,7 +109,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.numUpDownTimeLimit);
             this.panel1.Controls.Add(this.cmbBoxGameDifficulty);
-            this.panel1.Controls.Add(this.cmbBoxGamesTheme);
             this.panel1.Controls.Add(this.lbl_GameTime);
             this.panel1.Controls.Add(this.lblGameDifficulty);
             this.panel1.Controls.Add(this.label3);
@@ -106,6 +116,71 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(257, 350);
             this.panel1.TabIndex = 16;
+            // 
+            // chkcomboboxThemes
+            // 
+            this.chkcomboboxThemes.Drop = null;
+            this.chkcomboboxThemes.ItemText = "items";
+            this.chkcomboboxThemes.Location = new System.Drawing.Point(7, 40);
+            this.chkcomboboxThemes.Name = "chkcomboboxThemes";
+            this.chkcomboboxThemes.PlaceholderText = "Veuillez choissir au moins un thème";
+            this.chkcomboboxThemes.Size = new System.Drawing.Size(205, 19);
+            this.chkcomboboxThemes.TabIndex = 19;
+            this.chkcomboboxThemes.TextMode = CheckComboBox.CheckComboBoxTextMode.Items;
+            // 
+            // chkBoxInversedMouse
+            // 
+            this.chkBoxInversedMouse.AutoSize = true;
+            this.chkBoxInversedMouse.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxInversedMouse.Location = new System.Drawing.Point(23, 324);
+            this.chkBoxInversedMouse.Name = "chkBoxInversedMouse";
+            this.chkBoxInversedMouse.Size = new System.Drawing.Size(114, 19);
+            this.chkBoxInversedMouse.TabIndex = 19;
+            this.chkBoxInversedMouse.Text = "Souris inversée";
+            this.chkBoxInversedMouse.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxContinuedWrite
+            // 
+            this.chkBoxContinuedWrite.AutoSize = true;
+            this.chkBoxContinuedWrite.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxContinuedWrite.Location = new System.Drawing.Point(23, 299);
+            this.chkBoxContinuedWrite.Name = "chkBoxContinuedWrite";
+            this.chkBoxContinuedWrite.Size = new System.Drawing.Size(97, 19);
+            this.chkBoxContinuedWrite.TabIndex = 18;
+            this.chkBoxContinuedWrite.Text = "Traît continu";
+            this.chkBoxContinuedWrite.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxBlind
+            // 
+            this.chkBoxBlind.AutoSize = true;
+            this.chkBoxBlind.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxBlind.Location = new System.Drawing.Point(23, 274);
+            this.chkBoxBlind.Name = "chkBoxBlind";
+            this.chkBoxBlind.Size = new System.Drawing.Size(71, 19);
+            this.chkBoxBlind.TabIndex = 17;
+            this.chkBoxBlind.Text = "Aveugle";
+            this.chkBoxBlind.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxClues
+            // 
+            this.chkBoxClues.AutoSize = true;
+            this.chkBoxClues.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxClues.Location = new System.Drawing.Point(23, 249);
+            this.chkBoxClues.Name = "chkBoxClues";
+            this.chkBoxClues.Size = new System.Drawing.Size(67, 19);
+            this.chkBoxClues.TabIndex = 16;
+            this.chkBoxClues.Text = "Indices";
+            this.chkBoxClues.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Bonus :";
             // 
             // numUpDownTimeLimit
             // 
@@ -140,27 +215,6 @@
             this.cmbBoxGameDifficulty.Name = "cmbBoxGameDifficulty";
             this.cmbBoxGameDifficulty.Size = new System.Drawing.Size(205, 21);
             this.cmbBoxGameDifficulty.TabIndex = 14;
-            // 
-            // cmbBoxGamesTheme
-            // 
-            this.cmbBoxGamesTheme.FormattingEnabled = true;
-            this.cmbBoxGamesTheme.Items.AddRange(new object[] {
-            "Actions",
-            "Aliments",
-            "Animaux",
-            "Biologie",
-            "Informatique",
-            "Jeux",
-            "Lieux",
-            "Minéraux",
-            "Objets du quoitidien",
-            "Personnages fictifs",
-            "Personnages réels",
-            "Sport"});
-            this.cmbBoxGamesTheme.Location = new System.Drawing.Point(7, 39);
-            this.cmbBoxGamesTheme.Name = "cmbBoxGamesTheme";
-            this.cmbBoxGamesTheme.Size = new System.Drawing.Size(205, 21);
-            this.cmbBoxGamesTheme.TabIndex = 13;
             // 
             // lbl_GameTime
             // 
@@ -345,69 +399,6 @@
             this.pnlWhiteSpace.Size = new System.Drawing.Size(598, 48);
             this.pnlWhiteSpace.TabIndex = 4;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Bonus :";
-            // 
-            // chkBoxClues
-            // 
-            this.chkBoxClues.AutoSize = true;
-            this.chkBoxClues.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxClues.Location = new System.Drawing.Point(23, 249);
-            this.chkBoxClues.Name = "chkBoxClues";
-            this.chkBoxClues.Size = new System.Drawing.Size(67, 19);
-            this.chkBoxClues.TabIndex = 16;
-            this.chkBoxClues.Text = "Indices";
-            this.chkBoxClues.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxBlind
-            // 
-            this.chkBoxBlind.AutoSize = true;
-            this.chkBoxBlind.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxBlind.Location = new System.Drawing.Point(23, 274);
-            this.chkBoxBlind.Name = "chkBoxBlind";
-            this.chkBoxBlind.Size = new System.Drawing.Size(71, 19);
-            this.chkBoxBlind.TabIndex = 17;
-            this.chkBoxBlind.Text = "Aveugle";
-            this.chkBoxBlind.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxContinuedWrite
-            // 
-            this.chkBoxContinuedWrite.AutoSize = true;
-            this.chkBoxContinuedWrite.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxContinuedWrite.Location = new System.Drawing.Point(23, 299);
-            this.chkBoxContinuedWrite.Name = "chkBoxContinuedWrite";
-            this.chkBoxContinuedWrite.Size = new System.Drawing.Size(97, 19);
-            this.chkBoxContinuedWrite.TabIndex = 18;
-            this.chkBoxContinuedWrite.Text = "Traît continu";
-            this.chkBoxContinuedWrite.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxInversedMouse
-            // 
-            this.chkBoxInversedMouse.AutoSize = true;
-            this.chkBoxInversedMouse.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxInversedMouse.Location = new System.Drawing.Point(23, 324);
-            this.chkBoxInversedMouse.Name = "chkBoxInversedMouse";
-            this.chkBoxInversedMouse.Size = new System.Drawing.Size(114, 19);
-            this.chkBoxInversedMouse.TabIndex = 19;
-            this.chkBoxInversedMouse.Text = "Souris inversée";
-            this.chkBoxInversedMouse.UseVisualStyleBackColor = true;
-            // 
-            // btnCreateRoom
-            // 
-            this.btnCreateRoom.Location = new System.Drawing.Point(234, 477);
-            this.btnCreateRoom.Name = "btnCreateRoom";
-            this.btnCreateRoom.Size = new System.Drawing.Size(116, 35);
-            this.btnCreateRoom.TabIndex = 18;
-            this.btnCreateRoom.Text = "Créer";
-            this.btnCreateRoom.UseVisualStyleBackColor = true;
-            // 
             // CreateRoomView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,7 +446,6 @@
         private System.Windows.Forms.Label lbl_GameTime;
         private System.Windows.Forms.Label lblGameDifficulty;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbBoxGamesTheme;
         private System.Windows.Forms.ComboBox cmbBoxGameDifficulty;
         private System.Windows.Forms.NumericUpDown numUpDownTimeLimit;
         private System.Windows.Forms.Label label1;
@@ -464,5 +454,6 @@
         private System.Windows.Forms.CheckBox chkBoxInversedMouse;
         private System.Windows.Forms.CheckBox chkBoxContinuedWrite;
         private System.Windows.Forms.Button btnCreateRoom;
+        private CheckComboBox.CheckComboBoxControl chkcomboboxThemes;
     }
 }
