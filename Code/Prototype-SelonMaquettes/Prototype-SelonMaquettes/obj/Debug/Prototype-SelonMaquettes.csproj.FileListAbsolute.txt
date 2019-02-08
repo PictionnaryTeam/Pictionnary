@@ -1,0 +1,12 @@
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.csprojResolveAssemblyReference.cache
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype_SelonMaquettes.HomeView.resources
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype_SelonMaquettes.Properties.Resources.resources
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.csproj.GenerateResource.Cache
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.csproj.CoreCompileInputs.cache
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\bin\Debug\Prototype-SelonMaquettes.exe.config
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\bin\Debug\Prototype-SelonMaquettes.exe
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\bin\Debug\Prototype-SelonMaquettes.pdb
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.exe
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.pdb
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype_SelonMaquettes.CreateRoomView.resources
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype_SelonMaquettes.JoinRoomView.resources

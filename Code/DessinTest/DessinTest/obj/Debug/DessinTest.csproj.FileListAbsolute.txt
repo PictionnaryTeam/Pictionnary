@@ -1,0 +1,9 @@
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\bin\Debug\DessinTest.exe.config
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\bin\Debug\DessinTest.exe
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\bin\Debug\DessinTest.pdb
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.DrawingCanvas.resources
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.Form1.resources
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.Properties.Resources.resources
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.csproj.GenerateResource.Cache
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.exe
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.pdb
