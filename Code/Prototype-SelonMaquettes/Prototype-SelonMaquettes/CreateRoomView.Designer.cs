@@ -32,6 +32,7 @@
             this.btnCreateRoom = new System.Windows.Forms.Button();
             this.lbl_ParamGame = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkcomboboxThemes = new CheckComboBox.CheckComboBoxControl();
             this.chkBoxInversedMouse = new System.Windows.Forms.CheckBox();
             this.chkBoxContinuedWrite = new System.Windows.Forms.CheckBox();
             this.chkBoxBlind = new System.Windows.Forms.CheckBox();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.numUpDownTimeLimit = new System.Windows.Forms.NumericUpDown();
             this.cmbBoxGameDifficulty = new System.Windows.Forms.ComboBox();
-            this.cmbBoxGamesTheme = new System.Windows.Forms.ComboBox();
             this.lbl_GameTime = new System.Windows.Forms.Label();
             this.lblGameDifficulty = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +48,7 @@
             this.chkBoxGamesLimit = new System.Windows.Forms.CheckBox();
             this.numUpDownGamesLimit = new System.Windows.Forms.NumericUpDown();
             this.numUpDownLimitPlayers = new System.Windows.Forms.NumericUpDown();
+            this.lblPlayersLimit = new System.Windows.Forms.Label();
             this.txtBoxRoomPassword = new System.Windows.Forms.TextBox();
             this.lblRoomPassword = new System.Windows.Forms.Label();
             this.txtBoxRoomName = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.lblMiddleLine = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlWhiteSpace = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pnlMainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownTimeLimit)).BeginInit();
@@ -86,6 +86,7 @@
             this.btnCreateRoom.TabIndex = 18;
             this.btnCreateRoom.Text = "Créer";
             this.btnCreateRoom.UseVisualStyleBackColor = true;
+            this.btnCreateRoom.Click += new System.EventHandler(this.btnCreateRoom_Click);
             // 
             // lbl_ParamGame
             // 
@@ -100,6 +101,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.chkcomboboxThemes);
             this.panel1.Controls.Add(this.chkBoxInversedMouse);
             this.panel1.Controls.Add(this.chkBoxContinuedWrite);
             this.panel1.Controls.Add(this.chkBoxBlind);
@@ -107,7 +109,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.numUpDownTimeLimit);
             this.panel1.Controls.Add(this.cmbBoxGameDifficulty);
-            this.panel1.Controls.Add(this.cmbBoxGamesTheme);
             this.panel1.Controls.Add(this.lbl_GameTime);
             this.panel1.Controls.Add(this.lblGameDifficulty);
             this.panel1.Controls.Add(this.label3);
@@ -115,6 +116,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(257, 350);
             this.panel1.TabIndex = 16;
+            // 
+            // chkcomboboxThemes
+            // 
+            this.chkcomboboxThemes.Drop = null;
+            this.chkcomboboxThemes.ItemText = "items";
+            this.chkcomboboxThemes.Location = new System.Drawing.Point(7, 40);
+            this.chkcomboboxThemes.Name = "chkcomboboxThemes";
+            this.chkcomboboxThemes.PlaceholderText = "Veuillez choissir au moins un thème";
+            this.chkcomboboxThemes.Size = new System.Drawing.Size(205, 19);
+            this.chkcomboboxThemes.TabIndex = 19;
+            this.chkcomboboxThemes.TextMode = CheckComboBox.CheckComboBoxTextMode.Items;
             // 
             // chkBoxInversedMouse
             // 
@@ -172,32 +184,25 @@
             // 
             // numUpDownTimeLimit
             // 
-            this.numUpDownTimeLimit.DecimalPlaces = 2;
-            this.numUpDownTimeLimit.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
             this.numUpDownTimeLimit.Location = new System.Drawing.Point(7, 181);
             this.numUpDownTimeLimit.Maximum = new decimal(new int[] {
-            2,
+            5,
             0,
             0,
             0});
             this.numUpDownTimeLimit.Minimum = new decimal(new int[] {
-            10,
+            2,
             0,
             0,
-            131072});
+            0});
             this.numUpDownTimeLimit.Name = "numUpDownTimeLimit";
             this.numUpDownTimeLimit.Size = new System.Drawing.Size(60, 20);
             this.numUpDownTimeLimit.TabIndex = 15;
             this.numUpDownTimeLimit.Value = new decimal(new int[] {
-            1,
+            2,
             0,
             0,
             0});
-            this.numUpDownTimeLimit.ValueChanged += new System.EventHandler(this.numUpDownTimeLimit_ValueChanged);
             // 
             // cmbBoxGameDifficulty
             // 
@@ -210,27 +215,6 @@
             this.cmbBoxGameDifficulty.Name = "cmbBoxGameDifficulty";
             this.cmbBoxGameDifficulty.Size = new System.Drawing.Size(205, 21);
             this.cmbBoxGameDifficulty.TabIndex = 14;
-            // 
-            // cmbBoxGamesTheme
-            // 
-            this.cmbBoxGamesTheme.FormattingEnabled = true;
-            this.cmbBoxGamesTheme.Items.AddRange(new object[] {
-            "Actions",
-            "Aliments",
-            "Animaux",
-            "Biologie",
-            "Informatique",
-            "Jeux",
-            "Lieux",
-            "Minéraux",
-            "Objets du quoitidien",
-            "Personnages fictifs",
-            "Personnages réels",
-            "Sport"});
-            this.cmbBoxGamesTheme.Location = new System.Drawing.Point(7, 39);
-            this.cmbBoxGamesTheme.Name = "cmbBoxGamesTheme";
-            this.cmbBoxGamesTheme.Size = new System.Drawing.Size(205, 21);
-            this.cmbBoxGamesTheme.TabIndex = 13;
             // 
             // lbl_GameTime
             // 
@@ -275,10 +259,10 @@
             // pnlConfigRoom
             // 
             this.pnlConfigRoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlConfigRoom.Controls.Add(this.checkBox1);
             this.pnlConfigRoom.Controls.Add(this.chkBoxGamesLimit);
             this.pnlConfigRoom.Controls.Add(this.numUpDownGamesLimit);
             this.pnlConfigRoom.Controls.Add(this.numUpDownLimitPlayers);
+            this.pnlConfigRoom.Controls.Add(this.lblPlayersLimit);
             this.pnlConfigRoom.Controls.Add(this.txtBoxRoomPassword);
             this.pnlConfigRoom.Controls.Add(this.lblRoomPassword);
             this.pnlConfigRoom.Controls.Add(this.txtBoxRoomName);
@@ -298,11 +282,9 @@
             this.chkBoxGamesLimit.TabIndex = 15;
             this.chkBoxGamesLimit.Text = "Limite de parties";
             this.chkBoxGamesLimit.UseVisualStyleBackColor = true;
-            this.chkBoxGamesLimit.CheckedChanged += new System.EventHandler(this.chkBoxGamesLimit_CheckedChanged);
             // 
             // numUpDownGamesLimit
             // 
-            this.numUpDownGamesLimit.Enabled = false;
             this.numUpDownGamesLimit.Location = new System.Drawing.Point(40, 250);
             this.numUpDownGamesLimit.Maximum = new decimal(new int[] {
             4,
@@ -325,8 +307,7 @@
             // 
             // numUpDownLimitPlayers
             // 
-            this.numUpDownLimitPlayers.Enabled = false;
-            this.numUpDownLimitPlayers.Location = new System.Drawing.Point(23, 181);
+            this.numUpDownLimitPlayers.Location = new System.Drawing.Point(7, 181);
             this.numUpDownLimitPlayers.Maximum = new decimal(new int[] {
             4,
             0,
@@ -345,6 +326,16 @@
             0,
             0,
             0});
+            // 
+            // lblPlayersLimit
+            // 
+            this.lblPlayersLimit.AutoSize = true;
+            this.lblPlayersLimit.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayersLimit.Location = new System.Drawing.Point(3, 157);
+            this.lblPlayersLimit.Name = "lblPlayersLimit";
+            this.lblPlayersLimit.Size = new System.Drawing.Size(155, 21);
+            this.lblPlayersLimit.TabIndex = 10;
+            this.lblPlayersLimit.Text = "Limite de joueurs";
             // 
             // txtBoxRoomPassword
             // 
@@ -408,18 +399,6 @@
             this.pnlWhiteSpace.Size = new System.Drawing.Size(598, 48);
             this.pnlWhiteSpace.TabIndex = 4;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(23, 153);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(202, 25);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Limite de personnes";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
             // CreateRoomView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -458,6 +437,7 @@
         private System.Windows.Forms.TextBox txtBoxRoomName;
         private System.Windows.Forms.TextBox txtBoxRoomPassword;
         private System.Windows.Forms.Label lblRoomPassword;
+        private System.Windows.Forms.Label lblPlayersLimit;
         private System.Windows.Forms.NumericUpDown numUpDownLimitPlayers;
         private System.Windows.Forms.NumericUpDown numUpDownGamesLimit;
         private System.Windows.Forms.CheckBox chkBoxGamesLimit;
@@ -466,7 +446,6 @@
         private System.Windows.Forms.Label lbl_GameTime;
         private System.Windows.Forms.Label lblGameDifficulty;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbBoxGamesTheme;
         private System.Windows.Forms.ComboBox cmbBoxGameDifficulty;
         private System.Windows.Forms.NumericUpDown numUpDownTimeLimit;
         private System.Windows.Forms.Label label1;
@@ -475,6 +454,6 @@
         private System.Windows.Forms.CheckBox chkBoxInversedMouse;
         private System.Windows.Forms.CheckBox chkBoxContinuedWrite;
         private System.Windows.Forms.Button btnCreateRoom;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private CheckComboBox.CheckComboBoxControl chkcomboboxThemes;
     }
 }
