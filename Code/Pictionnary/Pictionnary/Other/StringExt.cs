@@ -53,6 +53,10 @@ namespace IndexatorusConnector.Helper.Extension
         /// <returns>The modified text</returns>
         private static string RemoveStartAndEndSpaces(this string text)
         {
+            //If the string is null or only contains spaces
+            if (string.IsNullOrWhiteSpace(text))
+                return text;
+
             //While the first char is a space
             while (text[0] == ' ')
             {
