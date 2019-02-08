@@ -58,6 +58,7 @@
     <Compile Include="GameClasses\Theme.cs" />
     <Compile Include="GameClasses\Timer.cs" />
     <Compile Include="Other\Enumerations.cs" />
+    <Compile Include="Other\StringExt.cs" />
     <Compile Include="PlayerClasses\Player.cs" />
     <Compile Include="Other\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
