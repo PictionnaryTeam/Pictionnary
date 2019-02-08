@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionTest.Objects
+namespace Pictionnary.Objects
 {
     abstract class PacketReceiveHandler
     {

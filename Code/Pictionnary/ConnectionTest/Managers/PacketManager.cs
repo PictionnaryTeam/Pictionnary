@@ -1,13 +1,13 @@
-﻿using ConnectionTest.Handlers;
-using ConnectionTest.Objects;
-using ConnectionTest.Objects.Packets;
+﻿using Pictionnary.Handlers;
+using Pictionnary.Objects;
+using Pictionnary.Objects.Packets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionTest.Managers
+namespace Pictionnary.Managers
 {
     class PacketManager
     {
@@ -20,6 +20,7 @@ namespace ConnectionTest.Managers
             AddHandler(PacketType.CLIENTPACKETPING, new PingPacketHandler());
             AddHandler(PacketType.CLIENTPACKETPOINTS, new PointsPacketHandler());
             AddHandler(PacketType.CLIENTREGISTER, new RegisterPacketHandler());
+            AddHandler(PacketType.CLIENTPACKETSENDROOM, new SendRoomPacketHandler());
         }
 
         public void AddHandler(PacketType packetType, PacketReceiveHandler handler)

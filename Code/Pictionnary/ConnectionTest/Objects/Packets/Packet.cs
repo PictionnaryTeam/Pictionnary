@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionTest.Objects.Packets
+namespace Pictionnary.Objects.Packets
 {
     [Serializable]
     abstract class Packet

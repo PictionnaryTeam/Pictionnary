@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Pictionnary</RootNamespace>
     <AssemblyName>Pictionnary</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,6 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
+    <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
+    <Compile Include="Networking\Handlers\RegisterPacketHandler.cs" />
+    <Compile Include="Networking\Handlers\RequestRoomPacketHandler.cs" />
+    <Compile Include="Networking\Handlers\SendRoomPacketHandler.cs" />
+    <Compile Include="Networking\Handlers\UnregisterPacketHandler.cs" />
+    <Compile Include="Networking\Helpers\ConsoleHelper.cs" />
+    <Compile Include="Networking\Helpers\NetworkHelper.cs" />
+    <Compile Include="Networking\Managers\ClientsManager.cs" />
+    <Compile Include="Networking\Managers\PacketManager.cs" />
+    <Compile Include="Networking\NetworkingHelper.cs" />
+    <Compile Include="Networking\Objects\NetworkError.cs" />
+    <Compile Include="Networking\Objects\PacketReceiveHandler.cs" />
+    <Compile Include="Networking\Objects\Packets\Client\ClientPingPacket.cs" />
+    <Compile Include="Networking\Objects\Packets\Client\ClientRegisterPacket.cs" />
+    <Compile Include="Networking\Objects\Packets\Client\ClientRequestRoomPacket.cs" />
+    <Compile Include="Networking\Objects\Packets\Client\ClientSendPointsPacket.cs" />
+    <Compile Include="Networking\Objects\Packets\Client\ClientSendRoomPacket.cs" />
+    <Compile Include="Networking\Objects\Packets\Client\ClientUnregisterPacket.cs" />
+    <Compile Include="Networking\Objects\Packets\Packet.cs" />
+    <Compile Include="Networking\Objects\Packets\PacketType.cs" />
+    <Compile Include="Networking\Objects\Packets\Server\ServerResponsePacket.cs" />
+    <Compile Include="Networking\Objects\Packets\Server\ServerSendRoomPacket.cs" />
+    <Compile Include="Networking\TCPClient.cs" />
+    <Compile Include="Networking\TCPServer.cs" />
     <Compile Include="Other\Constants.cs" />
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -69,6 +95,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,8 +110,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Networking\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

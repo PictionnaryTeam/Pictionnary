@@ -1,11 +1,11 @@
-﻿using ConnectionTest.Objects.Packets;
+﻿using Pictionnary.Objects.Packets;
 using System;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 
-namespace ConnectionTest.Helpers
+namespace Pictionnary.Helpers
 {
     class NetworkHelper
     {

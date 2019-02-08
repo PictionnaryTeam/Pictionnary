@@ -1,5 +1,5 @@
-﻿using ConnectionTest.Helpers;
-using ConnectionTest.Objects.Packets;
+﻿using Pictionnary.Helpers;
+using Pictionnary.Objects.Packets;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -7,7 +7,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
-namespace ConnectionTest
+namespace Pictionnary
 {
     class TCPServer
     {

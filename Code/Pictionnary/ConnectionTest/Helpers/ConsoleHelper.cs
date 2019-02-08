@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionTest.Helpers
+namespace Pictionnary.Helpers
 {
     public class ConsoleHelper
     {
-        private static string _lastLine = "";
-
         /// <summary>
         /// Write the specified text.
         /// </summary>
@@ -18,14 +16,7 @@ namespace ConnectionTest.Helpers
         public static void Write(String text)
         {
             //write in console with date time
-
-            if (_lastLine == text)
-            {
-                Console.SetCursorPosition(Console.CursorLeft, Console.CursorTop - 1);
-            }
-
             Console.WriteLine(DateTime.Now.ToString("T") + " > " + text);
-            _lastLine = text;
         }
 
 
@@ -39,7 +30,6 @@ namespace ConnectionTest.Helpers
             //write in console with date time
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(DateTime.Now.ToString("T") + " > " + text);
-            _lastLine = text;
             Console.ResetColor();
         }
     }

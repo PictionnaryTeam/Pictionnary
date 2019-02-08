@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionTest.Objects.Packets.Server
+namespace Pictionnary.Networking.Objects.Packets.Client
 {
     [Serializable]
-    class ServerPingPacket : Packet
+    class ClientPingPacket : Packet
     {
-        public ServerPingPacket() : base(PacketType.SERVERPACKETPING)
+        public ClientPingPacket() : base(PacketType.CLIENTPACKETPING)
         {
         }
     }

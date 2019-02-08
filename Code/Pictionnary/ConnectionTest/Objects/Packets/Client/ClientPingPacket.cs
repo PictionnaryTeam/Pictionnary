@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionTest.Objects.Packets.Client
+namespace Pictionnary.Objects.Packets.Client
 {
     [Serializable]
     class ClientPingPacket : Packet

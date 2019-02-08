@@ -1,5 +1,5 @@
-﻿using ConnectionTest.Helpers;
-using ConnectionTest.Objects.Packets;
+﻿using Pictionnary.Helpers;
+using Pictionnary.Objects.Packets;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConnectionTest
+namespace Pictionnary
 {
     class TCPClient
     {
@@ -24,13 +24,13 @@ namespace ConnectionTest
             try
             {
                 //init new tcp client
-                TcpClient tcpclnt = new TcpClient();
+                TcpClient client = new TcpClient();
 
                 //connect to the server
-                tcpclnt.Connect(_defaultIp, _defaultPort);
+                client.Connect(_defaultIp, _defaultPort);
 
                 //get tcp stream
-                Stream stm = tcpclnt.GetStream();
+                Stream stm = client.GetStream();
 
                 //serilize packet to send
                 byte[] packetBuffer = NetworkHelper.SerializePacket(packet);
@@ -51,7 +51,7 @@ namespace ConnectionTest
                 Packet packetAnswer = NetworkHelper.DeserializePacket(receiveBufferComplete);
 
                 //close connection
-                tcpclnt.Close();
+                client.Close();
 
                 return packetAnswer;
             }

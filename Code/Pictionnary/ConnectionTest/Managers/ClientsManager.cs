@@ -1,8 +1,8 @@
-﻿using ConnectionTest.Objects.Packets;
+﻿using Pictionnary.Objects.Packets;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ConnectionTest.Managers
+namespace Pictionnary.Managers
 {
     static class ClientsManager
     {
@@ -24,11 +24,21 @@ namespace ConnectionTest.Managers
 
         public static void RegisterClient(TCPServer client)
         {
+            if (_clients == null)
+            {
+                _clients = new List<TCPServer>();
+            }
+
             _clients.Add(client);
         }
 
         public static void RemoveClient(TCPServer client)
         {
+            if (_clients == null)
+            {
+                _clients = new List<TCPServer>();
+            }
+
             _clients.Remove(client);
         }
     }

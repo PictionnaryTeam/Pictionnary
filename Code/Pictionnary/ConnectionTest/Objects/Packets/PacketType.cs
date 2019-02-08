@@ -1,10 +1,11 @@
-﻿namespace ConnectionTest.Objects.Packets
+﻿namespace Pictionnary.Objects.Packets
 {
     enum PacketType
     {
-        CLIENTPACKETPING, SERVERPACKETPING,                    //PING PACKETS
+        CLIENTPACKETPING,                                      //PING PACKETS
         SERVERPACKETCONFIRMATION,                              //OK or KO
         CLIENTPACKETPOINTS,                                    //Draw points
-        CLIENTREGISTER                                         //Register to the room master
+        CLIENTREGISTER,                                        //Register to the room master
+        CLIENTPACKETSENDROOM
     }
 }

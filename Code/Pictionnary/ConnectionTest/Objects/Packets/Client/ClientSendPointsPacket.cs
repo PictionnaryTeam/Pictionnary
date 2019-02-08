@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace ConnectionTest.Objects.Packets.Client
+namespace Pictionnary.Objects.Packets.Client
 {
     [Serializable]
     class ClientSendPointsPacket : Packet
