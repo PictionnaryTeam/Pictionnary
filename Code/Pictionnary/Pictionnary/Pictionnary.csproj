@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
     <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
     <Compile Include="Networking\Handlers\RegisterPacketHandler.cs" />
@@ -72,14 +71,12 @@
     <Compile Include="Networking\Objects\Packets\Server\ServerSendRoomPacket.cs" />
     <Compile Include="Networking\TCPClient.cs" />
     <Compile Include="Networking\TCPServer.cs" />
-=======
     <Compile Include="Forms\GameEnd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\GameEnd.Designer.cs">
       <DependentUpon>GameEnd.cs</DependentUpon>
     </Compile>
->>>>>>> ea8955bad244572918254c6af8d9f916ee83552a
     <Compile Include="Other\Constants.cs" />
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -124,8 +121,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
-<<<<<<< HEAD
-=======
   <ItemGroup>
     <Content Include="Forms\Explications.txt" />
     <Content Include="GameClasses\Explications.txt" />
@@ -134,6 +129,5 @@
     <Content Include="PlayerClasses\Explications.txt" />
     <Content Include="Resources\Images\Podium.PNG" />
   </ItemGroup>
->>>>>>> ea8955bad244572918254c6af8d9f916ee83552a
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
