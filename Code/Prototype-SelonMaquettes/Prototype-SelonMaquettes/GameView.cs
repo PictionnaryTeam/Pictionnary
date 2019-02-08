@@ -12,6 +12,8 @@ namespace Prototype_SelonMaquettes
 {
     public partial class GameView : Form
     {
+        Dictionary<string, int> PlayersPoints = new Dictionary<string, int>();
+
         public GameView()
         {
             InitializeComponent();
