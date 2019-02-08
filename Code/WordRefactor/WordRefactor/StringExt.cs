@@ -1,13 +1,9 @@
-﻿///ETML
-///Author : Léa Cherpillod
-///Date : 04.02.2019
-///Description : The file containing the string extensions
-using System;
+﻿using System;
 using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace IndexatorusConnector.Helper.Extension
+namespace WordRefactor
 {
     /// <summary>
     /// The string extensions class
@@ -45,48 +41,6 @@ namespace IndexatorusConnector.Helper.Extension
             //Return the text by assembling the chars without their diacritics
             return new string(chars).Normalize(NormalizationForm.FormC);
         }
-        
-        /// <summary>
-        /// Remove the special chars of the string except '-' 
-        /// </summary>
-        /// <param name="text">The text to modify</param>
-        /// <returns>The text without special chars</returns>
-        private static string RemoveSpecialChars(this string text)
-        {
-            StringBuilder newText = new StringBuilder();
-
-            foreach (char chr in text)
-            {
-                //Check if the char is a letter or a digit, a - or a space
-                if (Char.IsLetterOrDigit(chr) || chr == '-' || chr == ' ' || chr == '\'')
-                    //If it is append it
-                    newText.Append(chr);
-            }
-
-            //Return the stringbuilder as a string
-            return newText.ToString();
-        }
-        
-        /// <summary>
-        /// Remove the numbers from a string
-        /// </summary>
-        /// <param name="text">The text to modify</param>
-        /// <returns>The modified text</returns>
-        private static string RemoveNumbers(this string text)
-        {
-            StringBuilder newText = new StringBuilder();
-
-            foreach (char chr in text)
-            {
-                //Checi if the char is a letter or a digit, a - or a space
-                if (!Char.IsDigit(chr))
-                    //If it is append it
-                    newText.Append(chr);
-            }
-
-            //Return the stringbuilder as a string
-            return newText.ToString();
-        }
 
         /// <summary>
         /// Remove the spaces at the beginning and end of the string
@@ -114,6 +68,48 @@ namespace IndexatorusConnector.Helper.Extension
             }
 
             return text;
+        }
+
+        /// <summary>
+        /// Remove the special chars of the string except '-' 
+        /// </summary>
+        /// <param name="text">The text to modify</param>
+        /// <returns>The text without special chars</returns>
+        private static string RemoveSpecialChars(this string text)
+        {
+            StringBuilder newText = new StringBuilder();
+
+            foreach (char chr in text)
+            {
+                //Check if the char is a letter or a digit, a - or a space
+                if (Char.IsLetterOrDigit(chr) || chr == '-' || chr == ' ' || chr == '\'')
+                    //If it is append it
+                    newText.Append(chr);
+            }
+
+            //Return the stringbuilder as a string
+            return newText.ToString();
+        }
+
+        /// <summary>
+        /// Remove the numbers from a string
+        /// </summary>
+        /// <param name="text">The text to modify</param>
+        /// <returns>The modified text</returns>
+        private static string RemoveNumbers(this string text)
+        {
+            StringBuilder newText = new StringBuilder();
+
+            foreach (char chr in text)
+            {
+                //Checi if the char is a letter or a digit, a - or a space
+                if (!Char.IsDigit(chr))
+                    //If it is append it
+                    newText.Append(chr);
+            }
+
+            //Return the stringbuilder as a string
+            return newText.ToString();
         }
     }
 }
