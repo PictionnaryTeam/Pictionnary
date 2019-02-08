@@ -83,8 +83,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Networking\" />
+    <Content Include="Forms\Explications.txt" />
+    <Content Include="GameClasses\Explications.txt" />
+    <Content Include="Networking\Explications.txt" />
+    <Content Include="Other\Explications.txt" />
+    <Content Include="PlayerClasses\Explications.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
