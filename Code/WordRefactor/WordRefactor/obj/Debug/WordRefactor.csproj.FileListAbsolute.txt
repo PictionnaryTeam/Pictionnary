@@ -1,0 +1,7 @@
+C:\Users\cherpillle\source\repos\Pictionnary\Code\WordRefactor\WordRefactor\bin\Debug\WordRefactor.exe.config
+C:\Users\cherpillle\source\repos\Pictionnary\Code\WordRefactor\WordRefactor\bin\Debug\WordRefactor.exe
+C:\Users\cherpillle\source\repos\Pictionnary\Code\WordRefactor\WordRefactor\bin\Debug\WordRefactor.pdb
+C:\Users\cherpillle\source\repos\Pictionnary\Code\WordRefactor\WordRefactor\obj\Debug\WordRefactor.csprojResolveAssemblyReference.cache
+C:\Users\cherpillle\source\repos\Pictionnary\Code\WordRefactor\WordRefactor\obj\Debug\WordRefactor.csproj.CoreCompileInputs.cache
+C:\Users\cherpillle\source\repos\Pictionnary\Code\WordRefactor\WordRefactor\obj\Debug\WordRefactor.exe
+C:\Users\cherpillle\source\repos\Pictionnary\Code\WordRefactor\WordRefactor\obj\Debug\WordRefactor.pdb
