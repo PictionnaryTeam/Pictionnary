@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pictionnary
 {
-    class Player
+    public class Player
     {
+        public string Name { get; set; }
+        public int Points { get; set; }
     }
 }
