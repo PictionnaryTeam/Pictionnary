@@ -12,9 +12,23 @@ namespace Prototype_SelonMaquettes
 {
     public partial class GameView : Form
     {
+       
+
+
         public GameView()
         {
             InitializeComponent();
+
+            List<string> listOfParams = new List<string>();
+
+            foreach (string element in listOfParams)
+            {
+                MessageBox.Show(element);
+            }
         }
+
+    
+
+
     }
 }

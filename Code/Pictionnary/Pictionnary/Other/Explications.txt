@@ -1,0 +1,1 @@
+﻿Ce dossier contient toutes les classes qui n'entrent pas dans les autres dossiers

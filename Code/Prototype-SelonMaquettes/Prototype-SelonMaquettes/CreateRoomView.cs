@@ -7,51 +7,104 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CheckComboBox;
 
 namespace Prototype_SelonMaquettes
 {
     public partial class CreateRoomView : Form
     {
+
+        private List<string> listOfThemes;
+
+        private List<string> checkedThemes;
+
+        private List<string> paramsOfRoom;
+
+        private List<string> listCHeckComboBoxTheme;
+
+
+
         public CreateRoomView()
         {
+            listOfThemes = new List<string>();
+            checkedThemes = new List<string>();
+            paramsOfRoom = new List<string>();
+            listCHeckComboBoxTheme = new List<string>();
+
+            listCHeckComboBoxTheme.Add("Actions");
+            listCHeckComboBoxTheme.Add("Aliments");
+            listCHeckComboBoxTheme.Add("Animaux");
+            listCHeckComboBoxTheme.Add("Biologie");
+            listCHeckComboBoxTheme.Add("Informatique");
+            listCHeckComboBoxTheme.Add("Jeux");
+            listCHeckComboBoxTheme.Add("Lieux");
+            listCHeckComboBoxTheme.Add("Minéraux");
+            listCHeckComboBoxTheme.Add("Objets du quoitidien");
+            listCHeckComboBoxTheme.Add("Personnages fictifs");
+            listCHeckComboBoxTheme.Add("Personnages réels");
+            listCHeckComboBoxTheme.Add("Sport");
+           
             InitializeComponent();
             Icon = Prototype_SelonMaquettes.Properties.Resources.Icon;
+
+
+
+            chkcomboboxThemes.SetItems(listCHeckComboBoxTheme);
         }
 
-        private void numUpDownTimeLimit_ValueChanged(object sender, EventArgs e)
+        private void btnCreateRoom_Click(object sender, EventArgs e)
         {
-            NumericUpDown numeric = (NumericUpDown)sender;
+            checkedThemes = chkcomboboxThemes.CheckedItems;
+            AddParamsOfRoom();
 
-      
+            GameView gameView = new GameView();
+            gameView.Show();
 
+            
+
+            
+            Hide();
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        public List<string> AddParamsOfRoom()
         {
-            CheckBox checkBox = (CheckBox)sender;
+            listOfThemes.Add(txtBoxRoomName.Text);
+            listOfThemes.Add(txtBoxRoomPassword.Text);
+            listOfThemes.Add(numUpDownLimitPlayers.Text);
+            if(chkBoxGamesLimit.Checked)
+            {
+                listOfThemes.Add(numUpDownGamesLimit.Text);
+            }
+            
 
-            if(checkBox.Checked)
+            foreach (string item in checkedThemes)
             {
-                numUpDownLimitPlayers.Enabled = true;
+                listOfThemes.Add(item);
             }
-            else
-            {
-                numUpDownLimitPlayers.Enabled = false;
-            }
-        }
 
-        private void chkBoxGamesLimit_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = (CheckBox)sender;
+            listOfThemes.Add(cmbBoxGameDifficulty.Text);
+            listOfThemes.Add(numUpDownTimeLimit.Text);
 
-            if (checkBox.Checked)
+            if (chkBoxClues.Checked)
             {
-                chkBoxGamesLimit.Enabled = true;
+                listOfThemes.Add(chkBoxClues.Text);
             }
-            else
+
+            if (chkBoxBlind.Checked)
             {
-                chkBoxGamesLimit.Enabled = false;
+                listOfThemes.Add(chkBoxBlind.Text);
             }
+
+            if (chkBoxContinuedWrite.Checked)
+            {
+                listOfThemes.Add(chkBoxContinuedWrite.Text);
+            }
+
+            if (chkBoxInversedMouse.Checked)
+            {
+                listOfThemes.Add(chkBoxInversedMouse.Text);
+            }
+            return listOfThemes;
         }
     }
 }
