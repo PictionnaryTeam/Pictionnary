@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CAA7E113-D488-4481-B969-367900190DDA}</ProjectGuid>
+    <ProjectGuid>{971CA814-4AE0-4175-8EFB-DC253AAE1CC9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Pictionnary</RootNamespace>
-    <AssemblyName>Pictionnary</AssemblyName>
+    <RootNamespace>PrototypeDessin</RootNamespace>
+    <AssemblyName>PrototypeDessin</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,31 +45,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\GameEnd.cs">
+    <Compile Include="Drawing.cs" />
+    <Compile Include="DrawingCanvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DrawingCanvas.Designer.cs">
+      <DependentUpon>DrawingCanvas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\GameEnd.Designer.cs">
-      <DependentUpon>GameEnd.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Other\Constants.cs" />
-    <Compile Include="Forms\Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GameClasses\DrawOption.cs" />
-    <Compile Include="GameClasses\Game.cs" />
-    <Compile Include="GameClasses\GameManager.cs" />
-    <Compile Include="GameClasses\Theme.cs" />
-    <Compile Include="GameClasses\Timer.cs" />
-    <Compile Include="Other\Enumerations.cs" />
-    <Compile Include="Other\StringExt.cs" />
-    <Compile Include="PlayerClasses\Player.cs" />
-    <Compile Include="Other\Program.cs" />
+    <Compile Include="Line.cs" />
+    <Compile Include="Pixel.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\GameEnd.resx">
-      <DependentUpon>GameEnd.cs</DependentUpon>
+    <EmbeddedResource Include="DrawingCanvas.resx">
+      <DependentUpon>DrawingCanvas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,7 +76,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -93,15 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="Forms\Explications.txt" />
-    <Content Include="GameClasses\Explications.txt" />
-    <Content Include="Networking\Explications.txt" />
-    <Content Include="Other\Explications.txt" />
-    <Content Include="PlayerClasses\Explications.txt" />
-    <Content Include="Resources\Images\Podium.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
