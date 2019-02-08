@@ -17,5 +17,41 @@ namespace Prototype_SelonMaquettes
             InitializeComponent();
             Icon = Prototype_SelonMaquettes.Properties.Resources.Icon;
         }
+
+        private void numUpDownTimeLimit_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numeric = (NumericUpDown)sender;
+
+      
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+
+            if(checkBox.Checked)
+            {
+                numUpDownLimitPlayers.Enabled = true;
+            }
+            else
+            {
+                numUpDownLimitPlayers.Enabled = false;
+            }
+        }
+
+        private void chkBoxGamesLimit_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+
+            if (checkBox.Checked)
+            {
+                chkBoxGamesLimit.Enabled = true;
+            }
+            else
+            {
+                chkBoxGamesLimit.Enabled = false;
+            }
+        }
     }
 }
