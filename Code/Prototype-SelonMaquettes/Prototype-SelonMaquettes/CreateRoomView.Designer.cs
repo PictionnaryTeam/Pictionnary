@@ -29,8 +29,14 @@
         private void InitializeComponent()
         {
             this.pnlMainPanel = new System.Windows.Forms.Panel();
+            this.btnCreateRoom = new System.Windows.Forms.Button();
             this.lbl_ParamGame = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkBoxInversedMouse = new System.Windows.Forms.CheckBox();
+            this.chkBoxContinuedWrite = new System.Windows.Forms.CheckBox();
+            this.chkBoxBlind = new System.Windows.Forms.CheckBox();
+            this.chkBoxClues = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.numUpDownTimeLimit = new System.Windows.Forms.NumericUpDown();
             this.cmbBoxGameDifficulty = new System.Windows.Forms.ComboBox();
             this.cmbBoxGamesTheme = new System.Windows.Forms.ComboBox();
@@ -42,7 +48,6 @@
             this.chkBoxGamesLimit = new System.Windows.Forms.CheckBox();
             this.numUpDownGamesLimit = new System.Windows.Forms.NumericUpDown();
             this.numUpDownLimitPlayers = new System.Windows.Forms.NumericUpDown();
-            this.lblPlayersLimit = new System.Windows.Forms.Label();
             this.txtBoxRoomPassword = new System.Windows.Forms.TextBox();
             this.lblRoomPassword = new System.Windows.Forms.Label();
             this.txtBoxRoomName = new System.Windows.Forms.TextBox();
@@ -50,12 +55,7 @@
             this.lblMiddleLine = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlWhiteSpace = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.chkBoxClues = new System.Windows.Forms.CheckBox();
-            this.chkBoxBlind = new System.Windows.Forms.CheckBox();
-            this.chkBoxContinuedWrite = new System.Windows.Forms.CheckBox();
-            this.chkBoxInversedMouse = new System.Windows.Forms.CheckBox();
-            this.btnCreateRoom = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.pnlMainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownTimeLimit)).BeginInit();
@@ -77,6 +77,15 @@
             this.pnlMainPanel.Name = "pnlMainPanel";
             this.pnlMainPanel.Size = new System.Drawing.Size(601, 537);
             this.pnlMainPanel.TabIndex = 3;
+            // 
+            // btnCreateRoom
+            // 
+            this.btnCreateRoom.Location = new System.Drawing.Point(234, 477);
+            this.btnCreateRoom.Name = "btnCreateRoom";
+            this.btnCreateRoom.Size = new System.Drawing.Size(116, 35);
+            this.btnCreateRoom.TabIndex = 18;
+            this.btnCreateRoom.Text = "Créer";
+            this.btnCreateRoom.UseVisualStyleBackColor = true;
             // 
             // lbl_ParamGame
             // 
@@ -107,27 +116,88 @@
             this.panel1.Size = new System.Drawing.Size(257, 350);
             this.panel1.TabIndex = 16;
             // 
+            // chkBoxInversedMouse
+            // 
+            this.chkBoxInversedMouse.AutoSize = true;
+            this.chkBoxInversedMouse.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxInversedMouse.Location = new System.Drawing.Point(23, 324);
+            this.chkBoxInversedMouse.Name = "chkBoxInversedMouse";
+            this.chkBoxInversedMouse.Size = new System.Drawing.Size(114, 19);
+            this.chkBoxInversedMouse.TabIndex = 19;
+            this.chkBoxInversedMouse.Text = "Souris inversée";
+            this.chkBoxInversedMouse.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxContinuedWrite
+            // 
+            this.chkBoxContinuedWrite.AutoSize = true;
+            this.chkBoxContinuedWrite.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxContinuedWrite.Location = new System.Drawing.Point(23, 299);
+            this.chkBoxContinuedWrite.Name = "chkBoxContinuedWrite";
+            this.chkBoxContinuedWrite.Size = new System.Drawing.Size(97, 19);
+            this.chkBoxContinuedWrite.TabIndex = 18;
+            this.chkBoxContinuedWrite.Text = "Traît continu";
+            this.chkBoxContinuedWrite.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxBlind
+            // 
+            this.chkBoxBlind.AutoSize = true;
+            this.chkBoxBlind.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxBlind.Location = new System.Drawing.Point(23, 274);
+            this.chkBoxBlind.Name = "chkBoxBlind";
+            this.chkBoxBlind.Size = new System.Drawing.Size(71, 19);
+            this.chkBoxBlind.TabIndex = 17;
+            this.chkBoxBlind.Text = "Aveugle";
+            this.chkBoxBlind.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxClues
+            // 
+            this.chkBoxClues.AutoSize = true;
+            this.chkBoxClues.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBoxClues.Location = new System.Drawing.Point(23, 249);
+            this.chkBoxClues.Name = "chkBoxClues";
+            this.chkBoxClues.Size = new System.Drawing.Size(67, 19);
+            this.chkBoxClues.TabIndex = 16;
+            this.chkBoxClues.Text = "Indices";
+            this.chkBoxClues.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Bonus :";
+            // 
             // numUpDownTimeLimit
             // 
+            this.numUpDownTimeLimit.DecimalPlaces = 2;
+            this.numUpDownTimeLimit.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            131072});
             this.numUpDownTimeLimit.Location = new System.Drawing.Point(7, 181);
             this.numUpDownTimeLimit.Maximum = new decimal(new int[] {
-            5,
+            2,
             0,
             0,
             0});
             this.numUpDownTimeLimit.Minimum = new decimal(new int[] {
-            2,
+            10,
             0,
             0,
-            0});
+            131072});
             this.numUpDownTimeLimit.Name = "numUpDownTimeLimit";
             this.numUpDownTimeLimit.Size = new System.Drawing.Size(60, 20);
             this.numUpDownTimeLimit.TabIndex = 15;
             this.numUpDownTimeLimit.Value = new decimal(new int[] {
-            2,
+            1,
             0,
             0,
             0});
+            this.numUpDownTimeLimit.ValueChanged += new System.EventHandler(this.numUpDownTimeLimit_ValueChanged);
             // 
             // cmbBoxGameDifficulty
             // 
@@ -205,10 +275,10 @@
             // pnlConfigRoom
             // 
             this.pnlConfigRoom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlConfigRoom.Controls.Add(this.checkBox1);
             this.pnlConfigRoom.Controls.Add(this.chkBoxGamesLimit);
             this.pnlConfigRoom.Controls.Add(this.numUpDownGamesLimit);
             this.pnlConfigRoom.Controls.Add(this.numUpDownLimitPlayers);
-            this.pnlConfigRoom.Controls.Add(this.lblPlayersLimit);
             this.pnlConfigRoom.Controls.Add(this.txtBoxRoomPassword);
             this.pnlConfigRoom.Controls.Add(this.lblRoomPassword);
             this.pnlConfigRoom.Controls.Add(this.txtBoxRoomName);
@@ -228,9 +298,11 @@
             this.chkBoxGamesLimit.TabIndex = 15;
             this.chkBoxGamesLimit.Text = "Limite de parties";
             this.chkBoxGamesLimit.UseVisualStyleBackColor = true;
+            this.chkBoxGamesLimit.CheckedChanged += new System.EventHandler(this.chkBoxGamesLimit_CheckedChanged);
             // 
             // numUpDownGamesLimit
             // 
+            this.numUpDownGamesLimit.Enabled = false;
             this.numUpDownGamesLimit.Location = new System.Drawing.Point(40, 250);
             this.numUpDownGamesLimit.Maximum = new decimal(new int[] {
             4,
@@ -253,7 +325,8 @@
             // 
             // numUpDownLimitPlayers
             // 
-            this.numUpDownLimitPlayers.Location = new System.Drawing.Point(7, 181);
+            this.numUpDownLimitPlayers.Enabled = false;
+            this.numUpDownLimitPlayers.Location = new System.Drawing.Point(23, 181);
             this.numUpDownLimitPlayers.Maximum = new decimal(new int[] {
             4,
             0,
@@ -272,16 +345,6 @@
             0,
             0,
             0});
-            // 
-            // lblPlayersLimit
-            // 
-            this.lblPlayersLimit.AutoSize = true;
-            this.lblPlayersLimit.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlayersLimit.Location = new System.Drawing.Point(3, 157);
-            this.lblPlayersLimit.Name = "lblPlayersLimit";
-            this.lblPlayersLimit.Size = new System.Drawing.Size(155, 21);
-            this.lblPlayersLimit.TabIndex = 10;
-            this.lblPlayersLimit.Text = "Limite de joueurs";
             // 
             // txtBoxRoomPassword
             // 
@@ -345,68 +408,17 @@
             this.pnlWhiteSpace.Size = new System.Drawing.Size(598, 48);
             this.pnlWhiteSpace.TabIndex = 4;
             // 
-            // label1
+            // checkBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 219);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Bonus :";
-            // 
-            // chkBoxClues
-            // 
-            this.chkBoxClues.AutoSize = true;
-            this.chkBoxClues.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxClues.Location = new System.Drawing.Point(23, 249);
-            this.chkBoxClues.Name = "chkBoxClues";
-            this.chkBoxClues.Size = new System.Drawing.Size(67, 19);
-            this.chkBoxClues.TabIndex = 16;
-            this.chkBoxClues.Text = "Indices";
-            this.chkBoxClues.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxBlind
-            // 
-            this.chkBoxBlind.AutoSize = true;
-            this.chkBoxBlind.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxBlind.Location = new System.Drawing.Point(23, 274);
-            this.chkBoxBlind.Name = "chkBoxBlind";
-            this.chkBoxBlind.Size = new System.Drawing.Size(71, 19);
-            this.chkBoxBlind.TabIndex = 17;
-            this.chkBoxBlind.Text = "Aveugle";
-            this.chkBoxBlind.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxContinuedWrite
-            // 
-            this.chkBoxContinuedWrite.AutoSize = true;
-            this.chkBoxContinuedWrite.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxContinuedWrite.Location = new System.Drawing.Point(23, 299);
-            this.chkBoxContinuedWrite.Name = "chkBoxContinuedWrite";
-            this.chkBoxContinuedWrite.Size = new System.Drawing.Size(97, 19);
-            this.chkBoxContinuedWrite.TabIndex = 18;
-            this.chkBoxContinuedWrite.Text = "Traît continu";
-            this.chkBoxContinuedWrite.UseVisualStyleBackColor = true;
-            // 
-            // chkBoxInversedMouse
-            // 
-            this.chkBoxInversedMouse.AutoSize = true;
-            this.chkBoxInversedMouse.Font = new System.Drawing.Font("Liberation Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBoxInversedMouse.Location = new System.Drawing.Point(23, 324);
-            this.chkBoxInversedMouse.Name = "chkBoxInversedMouse";
-            this.chkBoxInversedMouse.Size = new System.Drawing.Size(114, 19);
-            this.chkBoxInversedMouse.TabIndex = 19;
-            this.chkBoxInversedMouse.Text = "Souris inversée";
-            this.chkBoxInversedMouse.UseVisualStyleBackColor = true;
-            // 
-            // btnCreateRoom
-            // 
-            this.btnCreateRoom.Location = new System.Drawing.Point(234, 477);
-            this.btnCreateRoom.Name = "btnCreateRoom";
-            this.btnCreateRoom.Size = new System.Drawing.Size(116, 35);
-            this.btnCreateRoom.TabIndex = 18;
-            this.btnCreateRoom.Text = "Créer";
-            this.btnCreateRoom.UseVisualStyleBackColor = true;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Liberation Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(23, 153);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(202, 25);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.Text = "Limite de personnes";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // CreateRoomView
             // 
@@ -446,7 +458,6 @@
         private System.Windows.Forms.TextBox txtBoxRoomName;
         private System.Windows.Forms.TextBox txtBoxRoomPassword;
         private System.Windows.Forms.Label lblRoomPassword;
-        private System.Windows.Forms.Label lblPlayersLimit;
         private System.Windows.Forms.NumericUpDown numUpDownLimitPlayers;
         private System.Windows.Forms.NumericUpDown numUpDownGamesLimit;
         private System.Windows.Forms.CheckBox chkBoxGamesLimit;
@@ -464,5 +475,6 @@
         private System.Windows.Forms.CheckBox chkBoxInversedMouse;
         private System.Windows.Forms.CheckBox chkBoxContinuedWrite;
         private System.Windows.Forms.Button btnCreateRoom;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
