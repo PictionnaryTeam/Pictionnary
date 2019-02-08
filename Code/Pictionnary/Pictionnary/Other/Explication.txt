@@ -1,0 +1,1 @@
+﻿Other contient toutes les classes qui ne font pas partis des autres répértoire.
