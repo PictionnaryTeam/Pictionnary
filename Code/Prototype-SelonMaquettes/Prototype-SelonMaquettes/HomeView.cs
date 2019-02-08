@@ -21,17 +21,16 @@ namespace Prototype_SelonMaquettes
 
         private void btnCreateRoom_Click(object sender, EventArgs e)
         {
-            CreateRoomView createRoom = new CreateRoomView();
+            ChangeForm change = new ChangeForm();
 
-            createRoom.Show();
-            Hide();
+            change.ChangeOfForm(this, Forms.createRoom);
         }
 
         private void btnJoinRoom_Click(object sender, EventArgs e)
         {
-            JoinRoomView joinRoom = new JoinRoomView();
-            joinRoom.Show();
-            Hide();
+            ChangeForm change = new ChangeForm();
+
+            change.ChangeOfForm(this, Forms.enterRoom);
         }
     }
 }

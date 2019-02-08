@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\GameEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameEnd.Designer.cs">
+      <DependentUpon>GameEnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Other\Constants.cs" />
     <Compile Include="Forms\Home.cs">
       <SubType>Form</SubType>
@@ -58,9 +64,13 @@
     <Compile Include="GameClasses\Theme.cs" />
     <Compile Include="GameClasses\Timer.cs" />
     <Compile Include="Other\Enumerations.cs" />
+    <Compile Include="Other\StringExt.cs" />
     <Compile Include="PlayerClasses\Player.cs" />
     <Compile Include="Other\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\GameEnd.resx">
+      <DependentUpon>GameEnd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -69,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -83,8 +94,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Networking\" />
+    <Content Include="Forms\Explications.txt" />
+    <Content Include="GameClasses\Explications.txt" />
+    <Content Include="Networking\Explications.txt" />
+    <Content Include="Other\Explications.txt" />
+    <Content Include="PlayerClasses\Explications.txt" />
+    <Content Include="Resources\Images\Podium.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

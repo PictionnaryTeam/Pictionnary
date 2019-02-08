@@ -10,6 +10,7 @@ D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\De
 D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.pdb
 D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype_SelonMaquettes.CreateRoomView.resources
 D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype_SelonMaquettes.JoinRoomView.resources
+<<<<<<< HEAD
 D:\DATA\santosrean\Code\Prototype-SelonMaquettes\Prototype-SelonMaquettes\bin\Debug\Prototype-SelonMaquettes.exe.config
 D:\DATA\santosrean\Code\Prototype-SelonMaquettes\Prototype-SelonMaquettes\bin\Debug\Prototype-SelonMaquettes.exe
 D:\DATA\santosrean\Code\Prototype-SelonMaquettes\Prototype-SelonMaquettes\bin\Debug\Prototype-SelonMaquettes.pdb
@@ -22,3 +23,6 @@ D:\DATA\santosrean\Code\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\De
 D:\DATA\santosrean\Code\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.csproj.GenerateResource.Cache
 D:\DATA\santosrean\Code\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.exe
 D:\DATA\santosrean\Code\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype-SelonMaquettes.pdb
+=======
+D:\DATA\lopezes\ICT-426\Prototype-SelonMaquettes\Prototype-SelonMaquettes\obj\Debug\Prototype_SelonMaquettes.GameView.resources
+>>>>>>> ea85daa50281afa8e5efdee5abaf6418db2dba41
