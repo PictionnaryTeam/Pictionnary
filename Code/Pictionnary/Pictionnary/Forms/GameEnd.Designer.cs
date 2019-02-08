@@ -41,6 +41,7 @@
             this.lblFirstPodium = new System.Windows.Forms.Label();
             this.lblSecondPodium = new System.Windows.Forms.Label();
             this.lblThirdPodium = new System.Windows.Forms.Label();
+            this.lblClicks = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,11 +179,23 @@
             this.lblThirdPodium.Text = "ThirdPodium";
             this.lblThirdPodium.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblClicks
+            // 
+            this.lblClicks.AutoSize = true;
+            this.lblClicks.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClicks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblClicks.Location = new System.Drawing.Point(315, 362);
+            this.lblClicks.Name = "lblClicks";
+            this.lblClicks.Size = new System.Drawing.Size(54, 29);
+            this.lblClicks.TabIndex = 13;
+            this.lblClicks.Text = "x / x";
+            // 
             // GameEnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 403);
+            this.Controls.Add(this.lblClicks);
             this.Controls.Add(this.lblThirdPodium);
             this.Controls.Add(this.lblSecondPodium);
             this.Controls.Add(this.lblFirstPodium);
@@ -219,5 +232,6 @@
         private System.Windows.Forms.Label lblFirstPodium;
         private System.Windows.Forms.Label lblSecondPodium;
         private System.Windows.Forms.Label lblThirdPodium;
+        private System.Windows.Forms.Label lblClicks;
     }
 }
