@@ -52,6 +52,7 @@
     <Compile Include="DrawingCanvas.Designer.cs">
       <DependentUpon>DrawingCanvas.cs</DependentUpon>
     </Compile>
+    <Compile Include="DrawingGenerator.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Line.cs" />
+    <Compile Include="PanelRenderer.cs" />
     <Compile Include="Pixel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

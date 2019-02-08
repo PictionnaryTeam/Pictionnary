@@ -8,7 +8,7 @@ namespace PrototypeDessin
 {
     class Pixel
     {
-        Pixel(int x = 0, int y = 0)
+        public Pixel(int x = 0, int y = 0)
         {
             _x = x;
             _y = y;
