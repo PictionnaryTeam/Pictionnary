@@ -1,0 +1,133 @@
+Word;Category;Difficulty
+Boire;Actions;1
+Chanter;Actions;1
+Danser;Actions;1
+Lancer;Actions;1
+Se brosser les dents;Actions;1
+Acheter;Actions;2
+Ramer;Actions;2
+Se taire;Actions;2
+Araignée;Animaux;1
+Canard;Animaux;1
+Chat;Animaux;1
+Cheval;Animaux;1
+Chien;Animaux;1
+Coccinelle;Animaux;1
+Éléphant;Animaux;1
+Escargot;Animaux;1
+Lapin;Animaux;1
+Ours ;Animaux;1
+Vache;Animaux;1
+Île;Lieux;1
+Immeuble;Lieux;1
+Lac;Lieux;1
+Maison;Lieux;1
+Plage;Lieux;1
+Pyramide;Lieux;1
+Étang;Lieux;2
+Système solaire;Lieux;2
+Antenne;Objets;1
+Avion;Objets;1
+Barque;Objets;1
+Camion;Objets;1
+Clavier;Objets;1
+Coquillage;Objets;1
+Diamant;Objets;1
+Enveloppe;Objets;1
+Escalier;Objets;1
+Fauteuil;Objets;1
+Fenêtre;Objets;1
+Fleur;Objets;1
+Fourchette;Objets;1
+Horloge;Objets;1
+Lit;Objets;1
+Nénuphar;Objets;1
+Or;Objets;1
+Porte;Objets;1
+Prise de courant;Objets;1
+Punaise;Objets;1
+Spaghetti;Objets;1
+Téléphone;Objets;1
+Tournevis;Objets;1
+Train;Objets;1
+Vase;Objets;1
+Voiture;Objets;1
+Autoradio;Objets;2
+Bouton;Objets;2
+Charbon;Objets;2
+Deltaplane;Objets;2
+Dictionnaire;Objets;2
+Élastique;Objets;2
+Émeraude;Objets;2
+Escabeau;Objets;2
+Escarpin;Objets;2
+Lumière;Objets;2
+Parachute;Objets;2
+Rubis;Objets;2
+Saphir;Objets;2
+Échelle télescopique;Objets;3
+Escalator;Objets;3
+Lierre;Objets;3
+Pédalo;Objets;3
+Dark Vador;Personnages fictifs;2
+Harry Potter;Personnages fictifs;2
+Luigi;Personnages fictifs;2
+Mario;Personnages fictifs;2
+Peach;Personnages fictifs;2
+Pikachu;Personnages fictifs;2
+Son Goku;Personnages fictifs;2
+Toad;Personnages fictifs;2
+Anakin Skywalker;Personnages fictifs;3
+Bowser;Personnages fictifs;3
+Golum;Personnages fictifs;3
+Luke;Personnages fictifs;3
+Naruto;Personnages fictifs;3
+Sakura;Personnages fictifs;3
+Sasuke;Personnages fictifs;3
+Automobiliste;Personnes;1
+Cuisinier;Personnes;1
+Surfeur;Personnes;1
+Donald Trump;Personnes;2
+Emmanuel Macron;Personnes;2
+Infirmière;Personnes;2
+Jim Carrey;Personnes;2
+Johhny Depp;Personnes;2
+Peintre;Personnes;2
+Pompier;Personnes;2
+Barack Obama;Personnes;3
+Justin Bieber;Personnes;3
+Leonardo DiCaprio;Personnes;3
+Tupac Shakur;Personnes;3
+Basketball;Sports;1
+Football;Sports;1
+Golf;Sports;1
+Handball;Sports;1
+Tennis;Sports;1
+Volleyball;Sports;1
+Cricket;Sports;3
+Foobaskill;Sports;2
+Athlétisme;Sports;2
+Triathlon;Sports;2
+Canoë-kayak;Sports;3
+Cyclisme;Sports;1
+Curling;Sports;2
+Escrime;Sports;1
+Karaté;Sports;1
+Slackline;Sports;2
+Ski;Sports;1
+Voile;Sports;2
+Hockey;Sports;1
+Parkour;Sports;3
+Plongée;Sports;3
+Waterpolo;Sports;2
+Patin à glace;Sports;2
+Natation;Sports;1
+Agrès;Sports;3
+Yoga;Sports;3
+Équitation;Sports;1
+MMA;Sports;3
+Judo;Sports;2
+Ju-jitsu;Sports;3
+Taekwondo;Sports;2
+Rugby;Sports;1
+Football américain;Sports;2
