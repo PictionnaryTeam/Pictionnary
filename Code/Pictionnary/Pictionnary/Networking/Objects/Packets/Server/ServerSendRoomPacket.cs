@@ -1,7 +1,9 @@
 ﻿using Pictionnary.GameClasses;
+using System;
 
 namespace Pictionnary.Networking.Objects.Packets.Server
 {
+    [Serializable]
     class ServerSendRoomPacket : Packet
     {
         private Room room;

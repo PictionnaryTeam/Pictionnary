@@ -76,8 +76,10 @@ namespace Pictionnary.Networking
         /// <returns></returns>
         public NetworkError TryToRegister(string ip, string password = "")
         {
+            TCPClient.ServerIP = ip;
+
             //Send packet and get response
-            ServerResponsePacket result = TCPClient.SendPacket(new ClientRegisterPacket(_server, password)) as ServerResponsePacket;
+            ServerResponsePacket result = TCPClient.SendPacket(new ClientRegisterPacket(_server.ToServerInfos(), password)) as ServerResponsePacket;
 
             //No result
             if (result == null)
@@ -139,7 +141,7 @@ namespace Pictionnary.Networking
         public NetworkError UnregisterFromServer()
         {
             //Send packet and get response
-            ServerResponsePacket response = TCPClient.SendPacket(new ClientUnregisterPacket(_server)) as ServerResponsePacket;
+            ServerResponsePacket response = TCPClient.SendPacket(new ClientUnregisterPacket(_server.ToServerInfos())) as ServerResponsePacket;
 
             //No result
             if (response == null)

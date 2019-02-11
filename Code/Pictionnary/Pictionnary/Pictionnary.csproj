@@ -73,7 +73,7 @@
     </Compile>
     <Compile Include="Forms\JoinRoomView.Designer.cs">
       <DependentUpon>JoinRoomView.cs</DependentUpon>
-	</Compile>
+    </Compile>
     <Compile Include="Forms\RoundEnd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +103,7 @@
     <Compile Include="Networking\Objects\Packets\PacketType.cs" />
     <Compile Include="Networking\Objects\Packets\Server\ServerResponsePacket.cs" />
     <Compile Include="Networking\Objects\Packets\Server\ServerSendRoomPacket.cs" />
+    <Compile Include="Networking\Objects\TCPServerInfos.cs" />
     <Compile Include="Networking\TCPClient.cs" />
     <Compile Include="Networking\TCPServer.cs" />
     <Compile Include="Forms\GameEnd.cs">
@@ -136,7 +137,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JoinRoomView.resx">
       <DependentUpon>JoinRoomView.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RoundEnd.resx">
       <DependentUpon>RoundEnd.cs</DependentUpon>
     </EmbeddedResource>

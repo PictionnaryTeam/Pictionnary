@@ -15,6 +15,8 @@ namespace PrototypeDessin
         DrawingGenerator _drawingGenerator;
         PanelRenderer _renderer;
 
+        Timer _timer;
+
         public DrawingCanvas()
         {
             InitializeComponent();
@@ -22,6 +24,15 @@ namespace PrototypeDessin
             _drawingGenerator = new DrawingGenerator();
 
             _renderer = new PanelRenderer(pnl_canvas);
+
+            _timer = new Timer();
+            _timer.Start();
+
+            _timer.Tick += new EventHandler(timertick);
+
+            _timer.Interval = 100;
+
+            SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         private void pnl_canvas_Paint(object sender, PaintEventArgs e)
@@ -37,13 +48,18 @@ namespace PrototypeDessin
         private void pnl_canvas_MouseUp(object sender, MouseEventArgs e)
         {
             _drawingGenerator.MouseHasBeenReleased(e.Location);
-            Refresh();
+
+
         }
 
         private void pnl_canvas_MouseMove(object sender, MouseEventArgs e)
         {
             _drawingGenerator.MouseHasBeenMoved(e.Location);
-            Refresh();
+        }
+
+        private void timertick(object sender, EventArgs e)
+        {
+            Invalidate();
         }
 
         private void btn_white_Click(object sender, EventArgs e)

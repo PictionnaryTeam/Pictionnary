@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using Pictionnary.Networking.Objects;
 
 namespace Pictionnary.Networking
 {
@@ -143,6 +144,11 @@ namespace Pictionnary.Networking
             //No longer accept comnnections
             ConsoleHelper.Write("Preparing for closing connection accepting thread ...");
             Thread.CurrentThread.Abort();
+        }
+
+        public TCPServerInfos ToServerInfos()
+        {
+            return new TCPServerInfos(serverIP, serverPort, room);
         }
 
 
