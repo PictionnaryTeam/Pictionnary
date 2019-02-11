@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CheckComboBox">
+      <HintPath>G:\Code\CheckComboBox\CheckComboBox\bin\Debug\CheckComboBox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\ChangeForm.cs" />
+    <Compile Include="Forms\CreateRoomView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateRoomView.Designer.cs">
+      <DependentUpon>CreateRoomView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GameView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameView.Designer.cs">
+      <DependentUpon>GameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HomeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HomeView.Designer.cs">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JoinRoomView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\JoinRoomView.Designer.cs">
+      <DependentUpon>JoinRoomView.cs</DependentUpon>
+	</Compile>
+    <Compile Include="Forms\RoundEnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RoundEnd.Designer.cs">
+      <DependentUpon>RoundEnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
     <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
     <Compile Include="Networking\Handlers\RegisterPacketHandler.cs" />
@@ -78,24 +112,33 @@
       <DependentUpon>GameEnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Other\Constants.cs" />
-    <Compile Include="Forms\Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="GameClasses\DrawOption.cs" />
     <Compile Include="GameClasses\Game.cs" />
     <Compile Include="GameClasses\GameManager.cs" />
     <Compile Include="GameClasses\Theme.cs" />
     <Compile Include="GameClasses\Timer.cs" />
-    <Compile Include="Other\Enumerations.cs" />
+    <Compile Include="Other\DifferentFormsEnum.cs" />
     <Compile Include="Other\StringExt.cs" />
     <Compile Include="PlayerClasses\Player.cs" />
     <Compile Include="Other\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CreateRoomView.resx">
+      <DependentUpon>CreateRoomView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GameEnd.resx">
       <DependentUpon>GameEnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameView.resx">
+      <DependentUpon>GameView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomeView.resx">
+      <DependentUpon>HomeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\JoinRoomView.resx">
+      <DependentUpon>JoinRoomView.cs</DependentUpon>
+	</EmbeddedResource>
+    <EmbeddedResource Include="Forms\RoundEnd.resx">
+      <DependentUpon>RoundEnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -120,7 +163,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Forms\Explications.txt" />
     <Content Include="GameClasses\Explications.txt" />

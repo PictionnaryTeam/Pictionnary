@@ -48,6 +48,7 @@
             this.btn_black.TabIndex = 1;
             this.btn_black.Text = "Noir";
             this.btn_black.UseVisualStyleBackColor = true;
+            this.btn_black.Click += new System.EventHandler(this.btn_black_Click);
             // 
             // btn_blue
             // 
@@ -57,6 +58,7 @@
             this.btn_blue.TabIndex = 2;
             this.btn_blue.Text = "Bleu";
             this.btn_blue.UseVisualStyleBackColor = true;
+            this.btn_blue.Click += new System.EventHandler(this.btn_blue_Click);
             // 
             // btn_red
             // 
@@ -66,6 +68,7 @@
             this.btn_red.TabIndex = 3;
             this.btn_red.Text = "Rouge";
             this.btn_red.UseVisualStyleBackColor = true;
+            this.btn_red.Click += new System.EventHandler(this.btn_red_Click);
             // 
             // btn_green
             // 
@@ -75,6 +78,7 @@
             this.btn_green.TabIndex = 4;
             this.btn_green.Text = "Vert";
             this.btn_green.UseVisualStyleBackColor = true;
+            this.btn_green.Click += new System.EventHandler(this.btn_green_Click);
             // 
             // btn_yellow
             // 
@@ -84,6 +88,7 @@
             this.btn_yellow.TabIndex = 5;
             this.btn_yellow.Text = "Jaune";
             this.btn_yellow.UseVisualStyleBackColor = true;
+            this.btn_yellow.Click += new System.EventHandler(this.btn_yellow_Click);
             // 
             // btn_white
             // 
@@ -116,6 +121,7 @@
             0,
             0,
             0});
+            this.nud_brushSize.ValueChanged += new System.EventHandler(this.nud_brushSize_ValueChanged);
             // 
             // label1
             // 

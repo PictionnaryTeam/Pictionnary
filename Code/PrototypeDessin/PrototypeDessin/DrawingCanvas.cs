@@ -64,7 +64,37 @@ namespace PrototypeDessin
 
         private void btn_white_Click(object sender, EventArgs e)
         {
+            _drawingGenerator.SetBrushColor(Color.White);
+        }
 
+        private void btn_black_Click(object sender, EventArgs e)
+        {
+            _drawingGenerator.SetBrushColor(Color.Black);
+        }
+
+        private void btn_blue_Click(object sender, EventArgs e)
+        {
+            _drawingGenerator.SetBrushColor(Color.Blue);
+        }
+
+        private void btn_green_Click(object sender, EventArgs e)
+        {
+            _drawingGenerator.SetBrushColor(Color.Green);
+        }
+
+        private void btn_red_Click(object sender, EventArgs e)
+        {
+            _drawingGenerator.SetBrushColor(Color.Red);
+        }
+
+        private void btn_yellow_Click(object sender, EventArgs e)
+        {
+            _drawingGenerator.SetBrushColor(Color.Yellow);
+        }
+
+        private void nud_brushSize_ValueChanged(object sender, EventArgs e)
+        {
+            _drawingGenerator.SetBrushSize((int)nud_brushSize.Value);
         }
     }
 }
