@@ -31,3 +31,10 @@ D:\PortableGit\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Fo
 D:\PortableGit\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.HomeView.resources
 D:\PortableGit\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.JoinRoomView.resources
 D:\PortableGit\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.RoundEnd.resources
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\CheckComboBox.pdb
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.CreateRoomView.resources
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameEnd.resources
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameView.resources
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.HomeView.resources
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.JoinRoomView.resources
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.RoundEnd.resources

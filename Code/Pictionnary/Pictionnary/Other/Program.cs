@@ -12,7 +12,6 @@ namespace Pictionnary
     static class Program
     {
         public static PacketManager packetManager;
-        public static NetworkingHelper netHelper;
 
         /// <summary>
         /// Point d'entrée principal de l'application.

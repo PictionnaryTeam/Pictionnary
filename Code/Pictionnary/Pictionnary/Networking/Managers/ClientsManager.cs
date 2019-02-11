@@ -25,14 +25,14 @@ namespace Pictionnary.Networking.Managers
 
         public static NetworkError RegisterClient(TCPServerInfos client, string password)
         {
-            if (Program.netHelper.Server.Room == null)
+            if (NetworkingHelper.GetInstance().Server.Room == null)
             {
                 return NetworkError.NoRoomStarted;
             }
 
-            if (Program.netHelper.Server.Room.Password != "")
+            if (NetworkingHelper.GetInstance().Server.Room.Password != "")
             {
-                if (Program.netHelper.Server.Room.Password != password)
+                if (NetworkingHelper.GetInstance().Server.Room.Password != password)
                 {
                     return NetworkError.BadPassword;
                 }

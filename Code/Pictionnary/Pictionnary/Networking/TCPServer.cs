@@ -146,6 +146,7 @@ namespace Pictionnary.Networking
             Thread.CurrentThread.Abort();
         }
 
+
         public TCPServerInfos ToServerInfos()
         {
             return new TCPServerInfos(serverIP, serverPort, room);
@@ -177,7 +178,6 @@ namespace Pictionnary.Networking
                 ConsoleHelper.Write("Thread " + Thread.CurrentThread.ManagedThreadId + " > Preparing for thread aborting");
                 socket.Close();
                 threadsList.Remove(Thread.CurrentThread);
-                Thread.CurrentThread.Abort();
             }
 
             //create a table with correct size ^^ 

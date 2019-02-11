@@ -30,6 +30,7 @@ namespace Pictionnary.Networking
         {
             //Init server
             _server = new TCPServer("localhost", 32323);
+            _server.Start();
 
             //In port
             TCPClient.ServerPort = 32323;
