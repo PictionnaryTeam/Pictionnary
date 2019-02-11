@@ -50,10 +50,13 @@ namespace PrototypeDessin
                 //    tempY = currentPixel.Y;
                 //}
 
-                List<PointF> points = new List<PointF>();
-                foreach (Pixel p in currentLine.Pixels) points.Add(new PointF(p.X, p.Y));
+                if(currentLine.Pixels.Count > 1)
+                {
+                    List<PointF> points = new List<PointF>();
+                    foreach (Pixel p in currentLine.Pixels) points.Add(new PointF(p.X, p.Y));
 
-                paintEventArgs.Graphics.DrawLines(new Pen(currentLine.LineColor, currentLine.BrushSize), points.ToArray());
+                    paintEventArgs.Graphics.DrawLines(new Pen(currentLine.LineColor, currentLine.BrushSize), points.ToArray());
+                }
             }
         }
     }

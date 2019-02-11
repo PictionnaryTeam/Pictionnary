@@ -30,6 +30,10 @@ namespace PrototypeDessin
             {
                 return _lines;
             }
+            set
+            {
+                _lines = value;
+            }
         }
 
         private List<Line> _lines;

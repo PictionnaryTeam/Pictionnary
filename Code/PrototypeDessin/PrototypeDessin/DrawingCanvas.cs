@@ -7,15 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Diagnostics;
 
 namespace PrototypeDessin
 {
     public partial class DrawingCanvas : UserControl
     {
+        // Temps entre chaque rafraichissement du panel
+        const int TIME_BETWEEN_PANEL_REFRESHES = 50;
+
+        // Temps minimal entre l'ajout de 2 pixels au dessin
+        const int TIME_BETWEEN_PIXEL_ADDITION = 20;
+
         DrawingGenerator _drawingGenerator;
         PanelRenderer _renderer;
 
-        Timer _timer;
+        System.Windows.Forms.Timer _panelRefreshTimer;
+        Stopwatch _pixelAddTimer;
 
         public DrawingCanvas()
         {
@@ -25,12 +34,13 @@ namespace PrototypeDessin
 
             _renderer = new PanelRenderer(pnl_canvas);
 
-            _timer = new Timer();
-            _timer.Start();
+            _panelRefreshTimer = new System.Windows.Forms.Timer();
+            _panelRefreshTimer.Interval = TIME_BETWEEN_PANEL_REFRESHES;
+            _panelRefreshTimer.Tick += new EventHandler(TimerRefreshTick);
+            _panelRefreshTimer.Start();
 
-            _timer.Tick += new EventHandler(timertick);
-
-            _timer.Interval = 100;
+            _pixelAddTimer = new Stopwatch();
+            _pixelAddTimer.Start();
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
@@ -48,16 +58,19 @@ namespace PrototypeDessin
         private void pnl_canvas_MouseUp(object sender, MouseEventArgs e)
         {
             _drawingGenerator.MouseHasBeenReleased(e.Location);
-
-
         }
 
         private void pnl_canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            _drawingGenerator.MouseHasBeenMoved(e.Location);
+            if(_pixelAddTimer.ElapsedMilliseconds >= TIME_BETWEEN_PIXEL_ADDITION)
+            {
+                _drawingGenerator.MouseHasBeenMoved(e.Location);
+                _pixelAddTimer.Restart();
+            }
+            
         }
 
-        private void timertick(object sender, EventArgs e)
+        private void TimerRefreshTick(object sender, EventArgs e)
         {
             Invalidate();
         }

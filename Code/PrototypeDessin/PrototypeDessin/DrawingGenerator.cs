@@ -18,15 +18,11 @@ namespace PrototypeDessin
         Drawing _drawing;
         bool _isMouseClicked;
 
-        Line _currentLine;
-
         int _currentBrushSize;
         Color _currentBrushColor;
 
         public DrawingGenerator()
         {
-            _currentLine = new Line();
-
             _isMouseClicked = false;
             _drawing = new Drawing();
         }
@@ -47,9 +43,9 @@ namespace PrototypeDessin
         public void MouseHasBeenClicked(Point mousePos)
         {
             _isMouseClicked = true;
-            _currentLine = new Line();
-            _currentLine.BrushSize = _currentBrushSize;
-            _currentLine.LineColor = _currentBrushColor;
+            _drawing.AddLine(new Line());
+            _drawing.Lines[_drawing.Lines.Count - 1].BrushSize = _currentBrushSize;
+            _drawing.Lines[_drawing.Lines.Count - 1].LineColor = _currentBrushColor;
         }
 
         /// <summary>
@@ -58,14 +54,13 @@ namespace PrototypeDessin
         public void MouseHasBeenReleased(Point mousePos)
         {
             _isMouseClicked = false;
-            _drawing.AddLine(_currentLine);
         }
 
         public void MouseHasBeenMoved(Point mousePos)
         {
             if(_isMouseClicked)
             {
-                _currentLine.AddPixel(new Pixel(mousePos.X, mousePos.Y));
+                _drawing.Lines[_drawing.Lines.Count - 1].AddPixel(new Pixel(mousePos.X, mousePos.Y));
             }
         }
 
