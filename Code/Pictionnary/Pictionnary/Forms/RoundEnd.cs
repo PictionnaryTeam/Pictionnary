@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Pictionnary
+namespace Pictionnary.Forms
 {
-    public partial class Form1 : Form
+    public partial class RoundEnd : Form
     {
-        public Form1()
+        public RoundEnd()
         {
             InitializeComponent();
         }

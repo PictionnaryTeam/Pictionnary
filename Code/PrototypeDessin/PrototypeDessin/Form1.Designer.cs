@@ -28,13 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.drawingCanvas1 = new PrototypeDessin.DrawingCanvas();
             this.SuspendLayout();
+            // 
+            // drawingCanvas1
+            // 
+            this.drawingCanvas1.Location = new System.Drawing.Point(12, 12);
+            this.drawingCanvas1.Name = "drawingCanvas1";
+            this.drawingCanvas1.Size = new System.Drawing.Size(493, 393);
+            this.drawingCanvas1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(476, 357);
+            this.ClientSize = new System.Drawing.Size(575, 442);
+            this.Controls.Add(this.drawingCanvas1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -42,6 +51,8 @@
         }
 
         #endregion
+
+        private DrawingCanvas drawingCanvas1;
     }
 }
 
