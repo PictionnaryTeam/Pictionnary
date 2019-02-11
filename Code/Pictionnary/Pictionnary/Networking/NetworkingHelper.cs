@@ -10,6 +10,8 @@ namespace Pictionnary.Networking
         TCPClient _client;
         TCPServer _server;
 
+        static NetworkingHelper instance;
+
         /// <summary>
         /// [Warning] Do not edit if not sure
         /// </summary>
@@ -24,13 +26,30 @@ namespace Pictionnary.Networking
         /// <summary>
         /// Create a new instance of the <see cref="NetworkingHelper"/> class
         /// </summary>
-        public NetworkingHelper()
+        private NetworkingHelper()
         {
             //Init server
             _server = new TCPServer("localhost", 32323);
 
             //In port
             TCPClient.ServerPort = 32323;
+        }
+
+
+        public static NetworkingHelper GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new NetworkingHelper();
+            }
+
+            return instance;
+        }
+
+
+        public string GetLocalAdress()
+        {
+            return Helpers.NetworkHelper.GetLocalAdress();
         }
 
 
