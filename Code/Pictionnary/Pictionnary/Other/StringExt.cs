@@ -7,7 +7,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace IndexatorusConnector.Helper.Extension
+namespace Pictionnary.Other
 {
     /// <summary>
     /// The string extensions class
