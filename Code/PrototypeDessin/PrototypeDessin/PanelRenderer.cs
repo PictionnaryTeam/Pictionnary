@@ -24,7 +24,7 @@ namespace PrototypeDessin
             {
                 foreach (Pixel currentPixel in currentLine.Pixels)
                 {
-                    paintEventArgs.Graphics.(new Pen(currentLine.LineColor), currentPixel.X, currentPixel.Y, currentLine.BrushSize, currentLine.BrushSize);
+                    paintEventArgs.Graphics.DrawEllipse(new Pen(currentLine.LineColor), currentPixel.X, currentPixel.Y, currentLine.BrushSize, currentLine.BrushSize);
                 }
 
                 /*for(int i = 0; i < lines.Count; ++i)
