@@ -17,6 +17,12 @@ namespace Pictionnary.Forms
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Displays the players
+        /// </summary>
+        /// <param name="first"></param>
+        /// <param name="second"></param>
+        /// <param name="third"></param>
         public void ShowWinners(Player first, Player second, Player third)
         {
             lblFirstPlace.Text = $"{first.Name} :";
