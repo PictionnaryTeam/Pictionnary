@@ -1,14 +1,17 @@
-﻿namespace Pictionnary.Networking.Objects.Packets.Client
+﻿using System;
+
+namespace Pictionnary.Networking.Objects.Packets.Client
 {
+    [Serializable]
     class ClientUnregisterPacket : Packet
     {
-        TCPServer _client;
+        TCPServerInfos _client;
 
-        public ClientUnregisterPacket(TCPServer client) : base(PacketType.CLIENTPACKETUNREGISTER)
+        public ClientUnregisterPacket(TCPServerInfos client) : base(PacketType.CLIENTPACKETUNREGISTER)
         {
             _client = client;
         }
 
-        internal TCPServer Client { get => _client; set => _client = value; }
+        internal TCPServerInfos Client { get => _client; set => _client = value; }
     }
 }

@@ -7,7 +7,7 @@ namespace Pictionnary.Networking.Managers
 {
     static class ClientsManager
     {
-        static List<TCPServer> _clients;
+        static List<TCPServerInfos> _clients;
 
         public static async Task SendPacketToEveryClients(Packet packet)
         {
@@ -15,7 +15,7 @@ namespace Pictionnary.Networking.Managers
             {
                 if (_clients != null)
                 {
-                    foreach (TCPServer server in _clients)
+                    foreach (TCPServerInfos server in _clients)
                     {
                         TCPClient.ReSendPacket(packet, server.ServerIP, server.ServerPort);
                     }
@@ -23,7 +23,7 @@ namespace Pictionnary.Networking.Managers
             }
         }
 
-        public static NetworkError RegisterClient(TCPServer client, string password)
+        public static NetworkError RegisterClient(TCPServerInfos client, string password)
         {
             if (Program.netHelper.Server.Room == null)
             {
@@ -45,7 +45,7 @@ namespace Pictionnary.Networking.Managers
 
             if (_clients == null)
             {
-                _clients = new List<TCPServer>();
+                _clients = new List<TCPServerInfos>();
             }
 
             _clients.Add(client);
@@ -53,7 +53,7 @@ namespace Pictionnary.Networking.Managers
             return NetworkError.None;
         }
 
-        public static NetworkError RemoveClient(TCPServer client)
+        public static NetworkError RemoveClient(TCPServerInfos client)
         {
             if (client == null)
             {
@@ -62,7 +62,7 @@ namespace Pictionnary.Networking.Managers
 
             if (_clients == null)
             {
-                _clients = new List<TCPServer>();
+                _clients = new List<TCPServerInfos>();
             }
 
             _clients.Remove(client);
