@@ -22,7 +22,7 @@ namespace IndexatorusConnector.Helper.Extension
         public static string RefactorText(this string text)
         {
             //Return the refactored text
-            return text.ToLower().RemoveDiacritics().RemoveStartAndEndSpaces().RemoveSpecialChars().RemoveNumbers();
+            return text.ToLower().RemoveDiacritics().RemoveSpecialChars().RemoveNumbers().Trim();
         }
 
         /// <summary>
@@ -45,34 +45,6 @@ namespace IndexatorusConnector.Helper.Extension
             //Return the text by assembling the chars without their diacritics
             return new string(chars).Normalize(NormalizationForm.FormC);
         }
-
-        /// <summary>
-        /// Remove the spaces at the beginning and end of the string
-        /// </summary>
-        /// <param name="text">The text to modify</param>
-        /// <returns>The modified text</returns>
-        private static string RemoveStartAndEndSpaces(this string text)
-        {
-            //If the string is null or only contains spaces
-            if (string.IsNullOrWhiteSpace(text))
-                return text;
-
-            //While the first char is a space
-            while (text[0] == ' ')
-            {
-                //Remove it
-                text = text.Substring(1);
-            }
-
-            //While the last char is a space
-            while (text[text.Length - 1] == ' ')
-            {
-                //Remove it
-                text.Substring(0, text.Length - 1);
-            }
-
-            return text;
-        }
         
         /// <summary>
         /// Remove the special chars of the string except '-' 
@@ -86,7 +58,7 @@ namespace IndexatorusConnector.Helper.Extension
             foreach (char chr in text)
             {
                 //Check if the char is a letter or a digit, a - or a space
-                if (Char.IsLetterOrDigit(chr) || chr == '-' || chr == ' ')
+                if (Char.IsLetterOrDigit(chr) || chr == '-' || chr == ' ' || chr == '\'')
                     //If it is append it
                     newText.Append(chr);
             }
@@ -115,5 +87,6 @@ namespace IndexatorusConnector.Helper.Extension
             //Return the stringbuilder as a string
             return newText.ToString();
         }
+        
     }
 }

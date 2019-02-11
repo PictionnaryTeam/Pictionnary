@@ -16,7 +16,7 @@ namespace Prototype_SelonMaquettes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeView());
+            Application.Run(new GameView());
         }
     }
 }

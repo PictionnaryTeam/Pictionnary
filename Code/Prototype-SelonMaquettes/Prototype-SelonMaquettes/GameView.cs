@@ -12,8 +12,12 @@ namespace Prototype_SelonMaquettes
 {
     public partial class GameView : Form
     {
+<<<<<<< HEAD
+        Dictionary<string, int> PlayersPoints = new Dictionary<string, int>();
+=======
        
 
+>>>>>>> 514a462a78e1e6bb8fe5674da1f9d6a09040b5ba
 
         public GameView()
         {
