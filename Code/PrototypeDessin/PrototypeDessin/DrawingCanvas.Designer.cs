@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl_canvas = new System.Windows.Forms.Panel();
             this.btn_black = new System.Windows.Forms.Button();
             this.btn_blue = new System.Windows.Forms.Button();
             this.btn_red = new System.Windows.Forms.Button();
@@ -37,20 +36,9 @@
             this.btn_white = new System.Windows.Forms.Button();
             this.nud_brushSize = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnl_canvas = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nud_brushSize)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnl_canvas
-            // 
-            this.pnl_canvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_canvas.Location = new System.Drawing.Point(3, 67);
-            this.pnl_canvas.Name = "pnl_canvas";
-            this.pnl_canvas.Size = new System.Drawing.Size(466, 323);
-            this.pnl_canvas.TabIndex = 0;
-            this.pnl_canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_canvas_Paint);
-            this.pnl_canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseDown);
-            this.pnl_canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseMove);
-            this.pnl_canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseUp);
             // 
             // btn_black
             // 
@@ -144,6 +132,18 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Taille de la brosse";
             // 
+            // pnl_canvas
+            // 
+            this.pnl_canvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_canvas.Location = new System.Drawing.Point(3, 67);
+            this.pnl_canvas.Name = "pnl_canvas";
+            this.pnl_canvas.Size = new System.Drawing.Size(466, 323);
+            this.pnl_canvas.TabIndex = 0;
+            this.pnl_canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_canvas_Paint);
+            this.pnl_canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseDown);
+            this.pnl_canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseMove);
+            this.pnl_canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseUp);
+            // 
             // DrawingCanvas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +157,7 @@
             this.Controls.Add(this.btn_blue);
             this.Controls.Add(this.btn_black);
             this.Controls.Add(this.pnl_canvas);
+            this.DoubleBuffered = true;
             this.Name = "DrawingCanvas";
             this.Size = new System.Drawing.Size(472, 393);
             ((System.ComponentModel.ISupportInitialize)(this.nud_brushSize)).EndInit();
@@ -166,8 +167,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnl_canvas;
         private System.Windows.Forms.Button btn_black;
         private System.Windows.Forms.Button btn_blue;
         private System.Windows.Forms.Button btn_red;
@@ -176,5 +175,6 @@
         private System.Windows.Forms.Button btn_white;
         private System.Windows.Forms.NumericUpDown nud_brushSize;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnl_canvas;
     }
 }
