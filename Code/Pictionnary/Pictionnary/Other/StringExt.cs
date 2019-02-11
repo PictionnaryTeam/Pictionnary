@@ -22,7 +22,7 @@ namespace Pictionnary.Other
         public static string RefactorText(this string text)
         {
             //Return the refactored text
-            return text.ToLower().RemoveDiacritics().RemoveSpecialChars().RemoveNumbers().RemoveStartAndEndSpaces();
+            return text.ToLower().RemoveDiacritics().RemoveSpecialChars().RemoveNumbers().Trim();
         }
 
         /// <summary>
@@ -87,33 +87,6 @@ namespace Pictionnary.Other
             //Return the stringbuilder as a string
             return newText.ToString();
         }
-
-        /// <summary>
-        /// Remove the spaces at the beginning and end of the string
-        /// </summary>
-        /// <param name="text">The text to modify</param>
-        /// <returns>The modified text</returns>
-        private static string RemoveStartAndEndSpaces(this string text)
-        {
-            //If the string is null or only contains spaces
-            if (string.IsNullOrWhiteSpace(text))
-                return text;
-
-            //While the first char is a space
-            while (text[0] == ' ')
-            {
-                //Remove it
-                text = text.Substring(1);
-            }
-
-            //While the last char is a space
-            while (text[text.Length - 1] == ' ')
-            {
-                //Remove it
-                text = text.Substring(0, text.Length - 1);
-            }
-
-            return text;
-        }
+        
     }
 }

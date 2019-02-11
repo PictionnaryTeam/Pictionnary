@@ -11,23 +11,27 @@ namespace PrototypeDessin
     class PanelRenderer
     {
         Panel panelRendered;
-        List<Line> drawingToRender;
 
-        public PanelRenderer(Panel panelRendered, List<Line> drawingToRender)
+        public PanelRenderer(Panel panelRendered)
         {
             this.panelRendered = panelRendered;
-            this.drawingToRender = drawingToRender;
         }
 
-        public void Render()
+        public void Render(Drawing drawingToRender, PaintEventArgs paintEventArgs)
         {
-            foreach (Line currentLine in drawingToRender)
+            List<Line> lines = drawingToRender.Lines;
+            foreach (Line currentLine in lines)
             {
                 foreach (Pixel currentPixel in currentLine.Pixels)
                 {
-                    panelRendered.CreateGraphics().DrawEllipse(new Pen(currentLine.LineColor), currentPixel.X, currentPixel.Y, currentLine.BrushSize, currentLine.BrushSize);
+                    paintEventArgs.Graphics.(new Pen(currentLine.LineColor), currentPixel.X, currentPixel.Y, currentLine.BrushSize, currentLine.BrushSize);
+                }
+
+                /*for(int i = 0; i < lines.Count; ++i)
+                    {
+
+                    }*/
                 }
             }
-        }
     }
 }
