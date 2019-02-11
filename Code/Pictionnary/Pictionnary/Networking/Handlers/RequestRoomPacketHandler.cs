@@ -8,7 +8,7 @@ namespace Pictionnary.Networking.Handlers
     {
         public override Packet OnPacketReceive(Packet receivedPacket)
         {
-            return new ServerSendRoomPacket(Program.netHelper.Server.Room);
+            return new ServerSendRoomPacket(NetworkingHelper.GetInstance().Server.Room);
         }
     }
 }

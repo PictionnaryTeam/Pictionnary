@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
+using Pictionnary.Networking.Objects;
 
 namespace Pictionnary.Networking
 {
@@ -146,6 +147,12 @@ namespace Pictionnary.Networking
         }
 
 
+        public TCPServerInfos ToServerInfos()
+        {
+            return new TCPServerInfos(serverIP, serverPort, room);
+        }
+
+
         /// <summary>
         /// Accept packet from client
         /// </summary>
@@ -171,7 +178,6 @@ namespace Pictionnary.Networking
                 ConsoleHelper.Write("Thread " + Thread.CurrentThread.ManagedThreadId + " > Preparing for thread aborting");
                 socket.Close();
                 threadsList.Remove(Thread.CurrentThread);
-                Thread.CurrentThread.Abort();
             }
 
             //create a table with correct size ^^ 

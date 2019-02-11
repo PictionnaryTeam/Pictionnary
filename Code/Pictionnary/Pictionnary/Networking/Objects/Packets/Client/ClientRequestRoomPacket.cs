@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pictionnary.Networking.Objects.Packets.Client
 {
+    [Serializable]
     class ClientRequestRoomPacket : Packet
     {
         public ClientRequestRoomPacket() : base(PacketType.CLIENTPACKETREQUESTROOM)
