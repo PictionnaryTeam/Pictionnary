@@ -22,7 +22,10 @@ namespace PrototypeDessin
 
         public DrawingGenerator()
         {
+            _currentLine = new Line();
+
             _isMouseClicked = false;
+            _drawing = new Drawing();
         }
 
         public void SetBrushSize(int newSize)
