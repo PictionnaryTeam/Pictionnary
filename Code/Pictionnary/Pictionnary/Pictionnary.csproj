@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Compile Include="Forms\ChangeForm.cs" />
     <Compile Include="Forms\CreateRoomView.cs">
       <SubType>Form</SubType>
@@ -74,13 +73,12 @@
     </Compile>
     <Compile Include="Forms\JoinRoomView.Designer.cs">
       <DependentUpon>JoinRoomView.cs</DependentUpon>
-=======
+	</Compile>
     <Compile Include="Forms\RoundEnd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\RoundEnd.Designer.cs">
       <DependentUpon>RoundEnd.cs</DependentUpon>
->>>>>>> 54143495825e90590c632a15e13e873437cf918c
     </Compile>
     <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
     <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
@@ -130,7 +128,6 @@
     <EmbeddedResource Include="Forms\GameEnd.resx">
       <DependentUpon>GameEnd.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Forms\GameView.resx">
       <DependentUpon>GameView.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,10 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\JoinRoomView.resx">
       <DependentUpon>JoinRoomView.cs</DependentUpon>
-=======
+	</EmbeddedResource>
     <EmbeddedResource Include="Forms\RoundEnd.resx">
       <DependentUpon>RoundEnd.cs</DependentUpon>
->>>>>>> 54143495825e90590c632a15e13e873437cf918c
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -167,7 +163,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Forms\Explications.txt" />
     <Content Include="GameClasses\Explications.txt" />

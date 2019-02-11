@@ -20,6 +20,9 @@ namespace PrototypeDessin
 
         Line _currentLine;
 
+        int _currentBrushSize;
+        Color _currentBrushColor;
+
         public DrawingGenerator()
         {
             _currentLine = new Line();
@@ -30,12 +33,12 @@ namespace PrototypeDessin
 
         public void SetBrushSize(int newSize)
         {
-            _currentLine.BrushSize = newSize;
+            _currentBrushSize = newSize;
         }
 
         public void SetBrushColor(Color newColor)
         {
-            _currentLine.LineColor = newColor;
+            _currentBrushColor = newColor;
         }
 
         /// <summary>
@@ -45,6 +48,8 @@ namespace PrototypeDessin
         {
             _isMouseClicked = true;
             _currentLine = new Line();
+            _currentLine.BrushSize = _currentBrushSize;
+            _currentLine.LineColor = _currentBrushColor;
         }
 
         /// <summary>
