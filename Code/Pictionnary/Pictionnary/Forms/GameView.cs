@@ -38,21 +38,20 @@ namespace Pictionnary.Forms
         {
             tbxChatContent.Invoke(new MethodInvoker(() => {
                 tbxChatContent.Text += ($"{e.Sender} ({e.Time.ToShortTimeString()}) : {e.Message}\n");
+                tbxChatContent.SelectionStart = tbxChatContent.Text.Length;
                 tbxChatContent.ScrollToCaret();
             }));
         }
 
-        private void btnStopGame_Click(object sender, EventArgs e)
-        {
-            NetworkingHelper.GetInstance().SendMessageToChat("HALLO");
-        }
-
         private void Tbx_KeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter && tbxChat.Text.Trim() != "")
             {
                 string enteredText = tbxChat.Text;
 
+                NetworkingHelper.GetInstance().SendMessageToChat(enteredText);
+
+                /*
                 string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
 
                 if (enteredText.RefactorText() == wordToFind.RefactorText())
@@ -65,12 +64,13 @@ namespace Pictionnary.Forms
                     //Show to everyone the word that the player tried by using entered text
                     //{player.Name} a proposé le mot {enteredText}
                 }
+                */
 
-                tbxChat.Text = "";
+                tbxChat.Clear();
             }
         }
 
-        /*
+        
         /// <summary>
         /// Goes to the round end view
         /// </summary>
@@ -81,6 +81,6 @@ namespace Pictionnary.Forms
             FormManager.roundEnd.Show();
             Hide();
         }
-        */
+        
     }
 }
