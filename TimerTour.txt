@@ -1,0 +1,44 @@
+private void StartRound()
+        {
+            roundTimer.Start();
+            leftTime = TimeSpan.FromSeconds(roundTimeSelected);
+            roundStartTime = DateTime.Now;
+        }
+
+        private void roundTimer_Tick(object sender, EventArgs e)
+        {
+            gameProgressTime = DateTime.Now;
+            timerTime = leftTime - (gameProgressTime - roundStartTime);
+            lblTimer.Text = (timerTime.Minutes.ToString("0#") + ":" + timerTime.Seconds.ToString("0#"));
+
+            if (timerTime.Minutes == 0 && timerTime.Seconds == 0)
+            {
+                roundTimer.Stop();
+                Hide();
+                roundEnd.Show();
+                endRoundTimer.Start();
+            }
+        }
+
+        private void endRoundTimer_Tick(object sender, EventArgs e)
+        {
+            endRoundCounter++;
+
+            if (endRoundCounter == 15)
+            {
+                endRoundTimer.Stop();
+                endRoundCounter = 0;
+                roundEnd.Hide();
+                Show();
+                roundTimer.Start();
+            }
+        }
+
+RoundEnd roundEnd = new RoundEnd();
+
+        DateTime roundStartTime;
+        DateTime gameProgressTime;
+        TimeSpan timerTime;
+        TimeSpan leftTime;
+        int endRoundCounter = 0;
+        double roundTimeSelected = 50;
