@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace PrototypeDessin
 {
-    class PanelRenderer
+    public class PanelRenderer
     {
         Panel panelRendered;
 
@@ -22,38 +22,17 @@ namespace PrototypeDessin
             List<Line> lines = drawingToRender.Lines;
             foreach (Line currentLine in lines)
             {
-                /*foreach (Pixel currentPixel in currentLine.Pixels)
+                if(currentLine.Pixels.Count > 1)
                 {
-                    paintEventArgs.Graphics.DrawEllipse(new Pen(currentLine.LineColor), currentPixel.X, currentPixel.Y, currentLine.BrushSize, currentLine.BrushSize);
-                }*/
+                    List<PointF> points = new List<PointF>();
+                    foreach (Pixel p in currentLine.Pixels) points.Add(new PointF(p.X, p.Y));
 
-                /*for(int i = 0; i < lines.Count; ++i)
-                    {
-
-                    }*/
-
-                //int tempX = 0;
-                //int tempY = 0;
-                //bool isFirstLine = true;
-
-                //foreach (Pixel currentPixel in currentLine.Pixels)
-                //{
-                //    if (isFirstLine)
-                //    {
-                //        tempX = currentPixel.X;
-                //        tempY = currentPixel.Y;
-                //        isFirstLine = false;
-                //    }
-
-                //    paintEventArgs.Graphics.DrawLine(new Pen(currentLine.LineColor, currentLine.BrushSize), tempX, tempY, currentPixel.X, currentPixel.Y);
-                //    tempX = currentPixel.X;
-                //    tempY = currentPixel.Y;
-                //}
-
-                List<PointF> points = new List<PointF>();
-                foreach (Pixel p in currentLine.Pixels) points.Add(new PointF(p.X, p.Y));
-
-                paintEventArgs.Graphics.DrawLines(new Pen(currentLine.LineColor, currentLine.BrushSize), points.ToArray());
+                    paintEventArgs.Graphics.DrawLines(new Pen(currentLine.LineColor, currentLine.BrushSize), points.ToArray());
+                }
+                else if(currentLine.Pixels.Count > 0)
+                {
+                    paintEventArgs.Graphics.FillEllipse(new SolidBrush(currentLine.LineColor), new Rectangle(currentLine.Pixels[0].X - currentLine.BrushSize / 2, currentLine.Pixels[0].Y - currentLine.BrushSize / 2, currentLine.BrushSize, currentLine.BrushSize));
+                }
             }
         }
     }

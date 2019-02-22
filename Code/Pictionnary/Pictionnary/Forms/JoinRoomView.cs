@@ -8,24 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pictionnary.Networking;
+using Pictionnary.Other;
 
 namespace Pictionnary.Forms
 {
     public partial class JoinRoomView : Form
     {
         private NetworkingHelper network;
-        private ChangeForm changeForm;
-
 
         public JoinRoomView()
         {
             network = NetworkingHelper.GetInstance();
 
-            changeForm = new ChangeForm();
-
             InitializeComponent();
         }
 
+        /// <summary>
+        /// If there is an error, show a message box to inform the user. If not, goes to the game view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnJoinRoom_Click(object sender, EventArgs e)
         {
            switch(network.TryToRegister(txtBoxIPRoom.Text, txtBoxPassword.Text))
@@ -40,7 +42,9 @@ namespace Pictionnary.Forms
                     break;
 
                 case Networking.Objects.NetworkError.None:
-                    changeForm.ChangeOfForm(this, Other.DifferentForms.Game);
+                    //changeForm.ChangeOfForm(this, Other.DifferentForms.Game);
+                    FormManager.gameView.Show();
+                    Hide();
                     break;
 
                 default:

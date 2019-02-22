@@ -1,6 +1,6 @@
 ﻿namespace PrototypeDessin
 {
-    partial class DrawingCanvas
+    partial class DrawingCanvasTemplate
     {
         /// <summary> 
         /// Variable nécessaire au concepteur.
@@ -102,9 +102,14 @@
             // 
             // nud_brushSize
             // 
+            this.nud_brushSize.Increment = new decimal(new int[] {
+            4,
+            0,
+            0,
+            0});
             this.nud_brushSize.Location = new System.Drawing.Point(335, 33);
             this.nud_brushSize.Maximum = new decimal(new int[] {
-            10,
+            50,
             0,
             0,
             0});
@@ -117,7 +122,7 @@
             this.nud_brushSize.Size = new System.Drawing.Size(120, 20);
             this.nud_brushSize.TabIndex = 7;
             this.nud_brushSize.Value = new decimal(new int[] {
-            1,
+            4,
             0,
             0,
             0});
@@ -144,7 +149,7 @@
             this.pnl_canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseMove);
             this.pnl_canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseUp);
             // 
-            // DrawingCanvas
+            // DrawingCanvasTemplate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -158,7 +163,7 @@
             this.Controls.Add(this.btn_black);
             this.Controls.Add(this.pnl_canvas);
             this.DoubleBuffered = true;
-            this.Name = "DrawingCanvas";
+            this.Name = "DrawingCanvasTemplate";
             this.Size = new System.Drawing.Size(472, 393);
             ((System.ComponentModel.ISupportInitialize)(this.nud_brushSize)).EndInit();
             this.ResumeLayout(false);

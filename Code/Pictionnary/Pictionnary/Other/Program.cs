@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Pictionnary.Forms;
+using Pictionnary.Other;
 
 namespace Pictionnary
 {
@@ -23,7 +24,8 @@ namespace Pictionnary
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeView());
+            FormManager.InitializeForms();
+            Application.Run(FormManager.homeView);
         }
     }
 }

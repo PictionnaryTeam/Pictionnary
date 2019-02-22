@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PrototypeDessin
 {
-    class Pixel
+    [Serializable]
+    public class Pixel
     {
         public Pixel(int x = 0, int y = 0)
         {
