@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pictionnary.Other;
 
 namespace Pictionnary.Forms
 {
@@ -39,6 +40,7 @@ namespace Pictionnary.Forms
             {
                 string enteredText = tbxChat.Text;
 
+<<<<<<< HEAD
                 string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
 
                 if(enteredText.RefactorText() == wordToFind.RefactorText())
@@ -52,6 +54,17 @@ namespace Pictionnary.Forms
 
                 tbxChat.Text = "";
             }
+=======
+        /// <summary>
+        /// Goes to the round end view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStopGame_Click(object sender, EventArgs e)
+        {
+            FormManager.roundEnd.Show();
+            Hide();
+>>>>>>> 5162f26072a095fb3000a32137af0fd5b296a1a3
         }
     }
 }

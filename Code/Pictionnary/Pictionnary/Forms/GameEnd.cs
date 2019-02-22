@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using Pictionnary.Other;
 
 namespace Pictionnary.Forms
 {
@@ -31,6 +32,27 @@ namespace Pictionnary.Forms
             lblThirdPlace.Text = $"{third.Name} :";
             lblThirdPoints.Text = $"{third.Points.ToString()} pts";
             lblThirdPodium.Text = third.Name;
+        }
+
+        /// <summary>
+        /// Exits the application once the quit button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnQuit_Click(object sender, System.EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// Returns to the home view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnRestart_Click(object sender, System.EventArgs e)
+        {
+            FormManager.homeView.Show();
+            Hide();
         }
     }
 }
