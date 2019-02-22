@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Pictionnary.Networking;
+using Pictionnary.Other;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +20,10 @@ namespace Pictionnary.Forms
         {
             InitializeComponent();
 
+            tbxChat.PreviewKeyDown += new PreviewKeyDownEventHandler(Tbx_KeyDown);
+
+
+
             List<string> listOfParams = new List<string>();
 
             foreach (string element in listOfParams)
@@ -25,9 +31,27 @@ namespace Pictionnary.Forms
                 MessageBox.Show(element);
             }
         }
+        
+        
+        void Tbx_KeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string enteredText = tbxChat.Text;
 
-    
+                string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
 
+                if(enteredText.RefactorText() == wordToFind.RefactorText())
+                {
+                    //Show to everyone that he found the word
+                }
+                else
+                {
+                    //Show to everyone the word that the player tried by using entered text
+                }
 
+                tbxChat.Text = "";
+            }
+        }
     }
 }

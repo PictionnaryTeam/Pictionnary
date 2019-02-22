@@ -10,5 +10,6 @@ namespace Pictionnary.GameClasses
     class Room
     {
         public string Password { get; internal set; }
+        public string Word { get; internal set; }
     }
 }
