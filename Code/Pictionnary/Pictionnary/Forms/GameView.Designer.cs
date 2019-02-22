@@ -123,13 +123,14 @@
             this.label1.Text = "_ _ _ _ _ _ _ _ _";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tbxChatContent
             // 
             this.tbxChatContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxChatContent.Location = new System.Drawing.Point(798, 0);
             this.tbxChatContent.Multiline = true;
-            this.tbxChatContent.Name = "textBox1";
+            this.tbxChatContent.Name = "tbxChatContent";
             this.tbxChatContent.ReadOnly = true;
+            this.tbxChatContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxChatContent.Size = new System.Drawing.Size(185, 572);
             this.tbxChatContent.TabIndex = 4;
             // 

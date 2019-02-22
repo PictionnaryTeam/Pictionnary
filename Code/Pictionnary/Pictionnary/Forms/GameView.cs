@@ -36,7 +36,10 @@ namespace Pictionnary.Forms
 
         private void OnMessageReceive(OnChatMessageReceiveEventArgs e)
         {
-            tbxChatContent.Invoke(new MethodInvoker(() => { tbxChatContent.Text += ($"{e.Sender} ({e.Time.ToShortTimeString()}) : {e.Message}\n"); }));
+            tbxChatContent.Invoke(new MethodInvoker(() => {
+                tbxChatContent.Text += ($"{e.Sender} ({e.Time.ToShortTimeString()}) : {e.Message}\n");
+                tbxChatContent.ScrollToCaret();
+            }));
         }
 
         private void btnStopGame_Click(object sender, EventArgs e)
