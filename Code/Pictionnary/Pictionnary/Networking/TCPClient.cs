@@ -1,4 +1,5 @@
 ﻿using Pictionnary.Networking.Helpers;
+using Pictionnary.Networking.Managers;
 using Pictionnary.Networking.Objects.Packets;
 using System;
 using System.IO;
@@ -15,11 +16,16 @@ namespace Pictionnary.Networking
         public static string ServerIP { get => _defaultIp; set => _defaultIp = value; }
         public static int ServerPort { get => _defaultPort; set => _defaultPort = value; }
 
-
         public static Packet SendPacket(Packet packet)
         {
             try
             {
+                if (_defaultIp == NetworkHelper.GetLocalAdress())
+                {
+                    ClientsManager.SendPacketToEveryClients(packet);
+                    return null;
+                }
+
                 //init new tcp client
                 TcpClient client = new TcpClient();
 
@@ -65,6 +71,12 @@ namespace Pictionnary.Networking
         {
             try
             {
+                if (ip == NetworkHelper.GetLocalAdress())
+                {
+                    ClientsManager.SendPacketToEveryClients(packet);
+                    return null;
+                }
+
                 //init new tcp client
                 TcpClient tcpclnt = new TcpClient();
 
@@ -108,6 +120,11 @@ namespace Pictionnary.Networking
         {
             try
             {
+                if (ip == NetworkHelper.GetLocalAdress())
+                {
+                    return;
+                }
+
                 //init new tcp client
                 TcpClient tcpclnt = new TcpClient();
 

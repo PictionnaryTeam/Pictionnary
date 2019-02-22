@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlPlayers = new System.Windows.Forms.Panel();
+            this.pnlPlayersPoints = new System.Windows.Forms.Panel();
+            this.pbxRoomMaster = new System.Windows.Forms.PictureBox();
+            this.btnStopGame = new System.Windows.Forms.Button();
             this.lblChat = new System.Windows.Forms.Label();
             this.tbxChat = new System.Windows.Forms.TextBox();
             this.pnlTimer = new System.Windows.Forms.Panel();
             this.lblTimer = new System.Windows.Forms.Label();
-            this.btnStopGame = new System.Windows.Forms.Button();
-            this.pbxRoomMaster = new System.Windows.Forms.PictureBox();
-            this.pnlPlayersPoints = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timerGame = new System.Windows.Forms.Timer(this.components);
             this.pnlPlayers.SuspendLayout();
-            this.pnlTimer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).BeginInit();
+            this.pnlTimer.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlPlayers
@@ -54,6 +54,35 @@
             this.pnlPlayers.Name = "pnlPlayers";
             this.pnlPlayers.Size = new System.Drawing.Size(183, 538);
             this.pnlPlayers.TabIndex = 0;
+            // 
+            // pnlPlayersPoints
+            // 
+            this.pnlPlayersPoints.Location = new System.Drawing.Point(25, 20);
+            this.pnlPlayersPoints.Name = "pnlPlayersPoints";
+            this.pnlPlayersPoints.Size = new System.Drawing.Size(151, 115);
+            this.pnlPlayersPoints.TabIndex = 2;
+            // 
+            // pbxRoomMaster
+            // 
+            this.pbxRoomMaster.Location = new System.Drawing.Point(2, 20);
+            this.pbxRoomMaster.Name = "pbxRoomMaster";
+            this.pbxRoomMaster.Size = new System.Drawing.Size(20, 20);
+            this.pbxRoomMaster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxRoomMaster.TabIndex = 1;
+            this.pbxRoomMaster.TabStop = false;
+            // 
+            // btnStopGame
+            // 
+            this.btnStopGame.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnStopGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStopGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopGame.Location = new System.Drawing.Point(44, 470);
+            this.btnStopGame.Name = "btnStopGame";
+            this.btnStopGame.Size = new System.Drawing.Size(89, 48);
+            this.btnStopGame.TabIndex = 0;
+            this.btnStopGame.Text = "Arrêter la partie";
+            this.btnStopGame.UseVisualStyleBackColor = false;
+            this.btnStopGame.Click += new System.EventHandler(this.btnStopGame_Click);
             // 
             // lblChat
             // 
@@ -91,34 +120,6 @@
             this.lblTimer.TabIndex = 0;
             this.lblTimer.Text = "00:00";
             // 
-            // btnStopGame
-            // 
-            this.btnStopGame.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.btnStopGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStopGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopGame.Location = new System.Drawing.Point(44, 470);
-            this.btnStopGame.Name = "btnStopGame";
-            this.btnStopGame.Size = new System.Drawing.Size(89, 48);
-            this.btnStopGame.TabIndex = 0;
-            this.btnStopGame.Text = "Arrêter la partie";
-            this.btnStopGame.UseVisualStyleBackColor = false;
-            // 
-            // pbxRoomMaster
-            // 
-            this.pbxRoomMaster.Location = new System.Drawing.Point(2, 20);
-            this.pbxRoomMaster.Name = "pbxRoomMaster";
-            this.pbxRoomMaster.Size = new System.Drawing.Size(20, 20);
-            this.pbxRoomMaster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxRoomMaster.TabIndex = 1;
-            this.pbxRoomMaster.TabStop = false;
-            // 
-            // pnlPlayersPoints
-            // 
-            this.pnlPlayersPoints.Location = new System.Drawing.Point(25, 20);
-            this.pnlPlayersPoints.Name = "pnlPlayersPoints";
-            this.pnlPlayersPoints.Size = new System.Drawing.Size(151, 115);
-            this.pnlPlayersPoints.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -143,10 +144,11 @@
             this.Name = "GameView";
             this.Text = "                                                                                 " +
     "                                                             Game view";
+            this.Load += new System.EventHandler(this.GameView_Load);
             this.pnlPlayers.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).EndInit();
             this.pnlTimer.ResumeLayout(false);
             this.pnlTimer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -19,6 +19,7 @@ namespace Pictionnary.Networking.Managers
             AddHandler(PacketType.CLIENTPACKETSENDROOM, new SendRoomPacketHandler());
             AddHandler(PacketType.CLIENTPACKETREQUESTROOM, new RequestRoomPacketHandler());
             AddHandler(PacketType.CLIENTPACKETUNREGISTER, new UnregisterPacketHandler());
+            AddHandler(PacketType.CLIENTPACKETSENDCHATMESSAGEEVENT, new SendMessageInChatHandler());
         }
 
         public void AddHandler(PacketType packetType, PacketReceiveHandler handler)

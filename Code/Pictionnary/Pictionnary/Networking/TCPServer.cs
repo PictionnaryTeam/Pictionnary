@@ -33,11 +33,14 @@ namespace Pictionnary.Networking
         //Actual room
         Room room;
 
+        string pseudo;
+
         //Public
         public string ServerIP { get => serverIP; set => serverIP = value; }
         public IPAddress ServerAdress { get => serverAdress; set => serverAdress = value; }
         public int ServerPort { get => serverPort; set => serverPort = value; }
         internal Room Room { get => room; set => room = value; }
+        public string Pseudo { get => pseudo; set => pseudo = value; }
 
 
         /// <summary>
@@ -47,6 +50,8 @@ namespace Pictionnary.Networking
         /// <param name="serverPort"></param>
         public TCPServer(String serverIP, int serverPort)
         {
+            pseudo = NetworkHelper.GetLocalAdress();
+
             //Set room
             room = null;
 
@@ -149,7 +154,7 @@ namespace Pictionnary.Networking
 
         public TCPServerInfos ToServerInfos()
         {
-            return new TCPServerInfos(serverIP, serverPort, room);
+            return new TCPServerInfos(serverIP, serverPort, room, NetworkHelper.GetLocalAdress());
         }
 
 

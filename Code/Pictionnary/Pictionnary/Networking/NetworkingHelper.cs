@@ -1,7 +1,10 @@
 ﻿using Pictionnary.GameClasses;
+using Pictionnary.Networking.Helpers;
+using Pictionnary.Networking.Managers;
 using Pictionnary.Networking.Objects;
 using Pictionnary.Networking.Objects.Packets.Client;
 using Pictionnary.Networking.Objects.Packets.Server;
+using System;
 
 namespace Pictionnary.Networking
 {
@@ -33,6 +36,7 @@ namespace Pictionnary.Networking
             _server.Start();
 
             //In port
+            TCPClient.ServerIP = NetworkHelper.GetLocalAdress();
             TCPClient.ServerPort = 32323;
         }
 
@@ -45,6 +49,12 @@ namespace Pictionnary.Networking
             }
 
             return instance;
+        }
+
+
+        public void SetPseudo(string pseudo)
+        {
+            Server.Pseudo = pseudo;
         }
 
 
@@ -143,6 +153,28 @@ namespace Pictionnary.Networking
         {
             //Send packet and get response
             ServerResponsePacket response = TCPClient.SendPacket(new ClientUnregisterPacket(_server.ToServerInfos())) as ServerResponsePacket;
+
+            //No result
+            if (response == null)
+            {
+                //Unknown ip
+                return NetworkError.UnknownIp;
+            }
+
+            //Return error
+            return response.Error;
+        }
+
+
+        public NetworkError SendMessageToChat(string message)
+        {
+            if (_server.Room != null)
+            {
+                EventsManager.OnChatMessageReceive?.Invoke(new Objects.EventArgs.OnChatMessageReceiveEventArgs(Server.Pseudo, message, DateTime.Now));
+            }
+
+            //Send packet and get response
+            ServerResponsePacket response = TCPClient.SendPacket(new ClientSendChatMessageEventPacket(Server.Pseudo, message)) as ServerResponsePacket;
 
             //No result
             if (response == null)
