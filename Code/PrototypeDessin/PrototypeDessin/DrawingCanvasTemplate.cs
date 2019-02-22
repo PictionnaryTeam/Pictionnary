@@ -12,21 +12,21 @@ using System.Diagnostics;
 
 namespace PrototypeDessin
 {
-    public partial class DrawingCanvas : UserControl
+    public abstract partial class DrawingCanvasTemplate : UserControl
     {
         // Temps entre chaque rafraichissement du panel
-        const int TIME_BETWEEN_PANEL_REFRESHES = 50;
+        protected const int TIME_BETWEEN_PANEL_REFRESHES = 10;
 
         // Temps minimal entre l'ajout de 2 pixels au dessin
-        const int TIME_BETWEEN_PIXEL_ADDITION = 20;
+        protected const int TIME_BETWEEN_PIXEL_ADDITION = 0;
 
-        DrawingGenerator _drawingGenerator;
-        PanelRenderer _renderer;
+        protected DrawingGenerator _drawingGenerator;
+        protected PanelRenderer _renderer;
 
-        System.Windows.Forms.Timer _panelRefreshTimer;
-        Stopwatch _pixelAddTimer;
+        protected System.Windows.Forms.Timer _panelRefreshTimer;
+        protected Stopwatch _pixelAddTimer;
 
-        public DrawingCanvas()
+        public DrawingCanvasTemplate()
         {
             InitializeComponent();
 
@@ -42,6 +42,9 @@ namespace PrototypeDessin
             _pixelAddTimer = new Stopwatch();
             _pixelAddTimer.Start();
 
+            _drawingGenerator.SetBrushColor(Color.Black);
+            _drawingGenerator.SetBrushSize(4);
+
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
@@ -52,28 +55,55 @@ namespace PrototypeDessin
 
         private void pnl_canvas_MouseDown(object sender, MouseEventArgs e)
         {
-            _drawingGenerator.MouseHasBeenClicked(e.Location);
+            MousePressed(e.Location);
         }
+
+        protected void ConfirmMouseDown(Point mousePos)
+        {
+            _drawingGenerator.MouseHasBeenClicked(mousePos);
+        }
+
+        protected abstract void MousePressed(Point mousePos);
 
         private void pnl_canvas_MouseUp(object sender, MouseEventArgs e)
         {
-            _drawingGenerator.MouseHasBeenReleased(e.Location);
+            MouseReleased(e.Location);
         }
+
+        protected void ConfirmMouseUp(Point mousePos)
+        {
+            _drawingGenerator.MouseHasBeenReleased(mousePos);
+        }
+
+        protected abstract void MouseReleased(Point mousePos);
 
         private void pnl_canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if(_pixelAddTimer.ElapsedMilliseconds >= TIME_BETWEEN_PIXEL_ADDITION)
+            MouseDisplaced(e.Location);
+        }
+
+        protected void ConfirmMouseMovement(Point mousePos)
+        {
+            if (_pixelAddTimer.ElapsedMilliseconds >= TIME_BETWEEN_PIXEL_ADDITION)
             {
-                _drawingGenerator.MouseHasBeenMoved(e.Location);
+                _drawingGenerator.MouseHasBeenMoved(mousePos);
                 _pixelAddTimer.Restart();
             }
-            
         }
+
+        protected abstract void MouseDisplaced(Point mousePos);
 
         private void TimerRefreshTick(object sender, EventArgs e)
         {
+            TryToRefresh();
+        }
+
+        protected void ConfirmRefresh()
+        {
             Invalidate();
         }
+
+        protected abstract void TryToRefresh();
 
         private void btn_white_Click(object sender, EventArgs e)
         {
@@ -108,6 +138,12 @@ namespace PrototypeDessin
         private void nud_brushSize_ValueChanged(object sender, EventArgs e)
         {
             _drawingGenerator.SetBrushSize((int)nud_brushSize.Value);
+        }
+
+
+        public Drawing GetDrawing()
+        {
+            return _drawingGenerator.Drawing;
         }
     }
 }

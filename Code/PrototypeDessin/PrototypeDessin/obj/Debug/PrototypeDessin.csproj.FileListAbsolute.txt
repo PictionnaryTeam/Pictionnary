@@ -19,3 +19,13 @@ C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debu
 C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.exe
 C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.pdb
 C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csprojResolveAssemblyReference.cache
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.exe.config
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.exe
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.pdb
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.Form1.resources
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.Properties.Resources.resources
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csproj.GenerateResource.Cache
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csproj.CoreCompileInputs.cache
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.exe
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.pdb
+F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.DrawingCanvasTemplate.resources

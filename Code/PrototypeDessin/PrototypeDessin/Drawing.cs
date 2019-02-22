@@ -7,7 +7,8 @@ using System.Windows.Forms;
 
 namespace PrototypeDessin
 {
-    class Drawing
+    [Serializable]
+    public class Drawing
     {
         public Drawing()
         {

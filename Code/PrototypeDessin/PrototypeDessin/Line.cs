@@ -7,7 +7,8 @@ using System.Drawing;
 
 namespace PrototypeDessin
 {
-    class Line
+    [Serializable]
+    public class Line
     {
         public Line()
         {
