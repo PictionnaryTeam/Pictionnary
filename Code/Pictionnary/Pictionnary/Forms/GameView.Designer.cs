@@ -33,12 +33,12 @@
             this.pnlPlayersPoints = new System.Windows.Forms.Panel();
             this.pbxRoomMaster = new System.Windows.Forms.PictureBox();
             this.btnStopGame = new System.Windows.Forms.Button();
-            this.lblChat = new System.Windows.Forms.Label();
             this.tbxChat = new System.Windows.Forms.TextBox();
             this.pnlTimer = new System.Windows.Forms.Panel();
             this.lblTimer = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timerGame = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnlPlayers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).BeginInit();
             this.pnlTimer.SuspendLayout();
@@ -84,14 +84,6 @@
             this.btnStopGame.UseVisualStyleBackColor = false;
             this.btnStopGame.Click += new System.EventHandler(this.btnStopGame_Click);
             // 
-            // lblChat
-            // 
-            this.lblChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblChat.Location = new System.Drawing.Point(798, 0);
-            this.lblChat.Name = "lblChat";
-            this.lblChat.Size = new System.Drawing.Size(185, 579);
-            this.lblChat.TabIndex = 1;
-            // 
             // tbxChat
             // 
             this.tbxChat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -131,12 +123,21 @@
             this.label1.Text = "_ _ _ _ _ _ _ _ _";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(798, 0);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(185, 579);
+            this.textBox1.TabIndex = 4;
+            // 
             // GameView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 602);
-            this.Controls.Add(this.lblChat);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.tbxChat);
@@ -156,7 +157,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlPlayers;
-        private System.Windows.Forms.Label lblChat;
         private System.Windows.Forms.TextBox tbxChat;
         private System.Windows.Forms.Panel pnlTimer;
         private System.Windows.Forms.Label lblTimer;
@@ -165,5 +165,6 @@
         private System.Windows.Forms.PictureBox pbxRoomMaster;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timerGame;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
