@@ -2,14 +2,7 @@
 using Pictionnary.Other;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Pictionnary.Other;
 
 namespace Pictionnary.Forms
 {
@@ -24,7 +17,6 @@ namespace Pictionnary.Forms
             tbxChat.PreviewKeyDown += new PreviewKeyDownEventHandler(Tbx_KeyDown);
 
 
-
             List<string> listOfParams = new List<string>();
 
             foreach (string element in listOfParams)
@@ -32,29 +24,30 @@ namespace Pictionnary.Forms
                 MessageBox.Show(element);
             }
         }
-        
-        
+
+
         void Tbx_KeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
                 string enteredText = tbxChat.Text;
 
-<<<<<<< HEAD
                 string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
 
-                if(enteredText.RefactorText() == wordToFind.RefactorText())
+                if (enteredText.RefactorText() == wordToFind.RefactorText())
                 {
                     //Show to everyone that he found the word
+                    //{player.Name} a trouvé le mot
                 }
                 else
                 {
                     //Show to everyone the word that the player tried by using entered text
+                    //{player.Name} a proposé le mot {enteredText}
                 }
 
                 tbxChat.Text = "";
             }
-=======
+        }
         /// <summary>
         /// Goes to the round end view
         /// </summary>
@@ -64,7 +57,6 @@ namespace Pictionnary.Forms
         {
             FormManager.roundEnd.Show();
             Hide();
->>>>>>> 5162f26072a095fb3000a32137af0fd5b296a1a3
         }
     }
 }
