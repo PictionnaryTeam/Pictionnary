@@ -10,12 +10,17 @@ namespace Pictionnary.Forms
     {
         Dictionary<string, int> PlayersPoints = new Dictionary<string, int>();
 
+        // Éditeur de dessin
+        DrawingEditor.DrawingCanvasTemplate _drawawableCanvas;
+
+        // "toile" sur laquelle on peut afficher les dessins
+        Panel _renderOnlyCanvas;
+
         public GameView()
         {
             InitializeComponent();
 
             tbxChat.PreviewKeyDown += new PreviewKeyDownEventHandler(Tbx_KeyDown);
-
 
             List<string> listOfParams = new List<string>();
 
