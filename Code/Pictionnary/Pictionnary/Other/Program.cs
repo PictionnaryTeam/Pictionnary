@@ -5,13 +5,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pictionnary.Forms;
 
 namespace Pictionnary
 {
     static class Program
     {
         public static PacketManager packetManager;
-        public static NetworkingHelper netHelper;
 
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -23,7 +23,7 @@ namespace Pictionnary
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new HomeView());
         }
     }
 }

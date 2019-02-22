@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Pictionnary.Other
 {
-    class Enumerations
+    public enum DifferentForms
     {
-    }
+        Home,
+        CreateGame,
+        JoinGame,
+        Game,
+        EndGame
+    };
 }

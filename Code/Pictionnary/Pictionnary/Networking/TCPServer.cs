@@ -1,4 +1,5 @@
-﻿using Pictionnary.Networking.Helpers;
+﻿using Pictionnary.GameClasses;
+using Pictionnary.Networking.Helpers;
 using Pictionnary.Networking.Objects.Packets;
 using System;
 using System.Collections.Generic;
@@ -6,10 +7,13 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-using Pictionnary.GameClasses;
+using Pictionnary.Networking.Objects;
 
 namespace Pictionnary.Networking
 {
+    /// <summary>
+    /// Represent a TCP server
+    /// </summary>
     class TCPServer
     {
         //Server informations
@@ -36,20 +40,32 @@ namespace Pictionnary.Networking
         internal Room Room { get => room; set => room = value; }
 
 
+        /// <summary>
+        /// Create a new instance of the <see cref="TCPServer"/> class
+        /// </summary>
+        /// <param name="serverIP">Ip or 'localhost'</param>
+        /// <param name="serverPort"></param>
         public TCPServer(String serverIP, int serverPort)
         {
+            //Set room
             room = null;
 
+            //If local mode
             if (serverIP == "localhost")
             {
+                //Get local ip
                 serverIP = NetworkHelper.GetLocalAdress();
             }
 
+            //Set values
             this.serverIP = serverIP;
             this.serverPort = serverPort;
         }
 
 
+        /// <summary>
+        /// Start TCP Server
+        /// </summary>
         public void Start()
         {
             //Parse server ip
@@ -68,12 +84,20 @@ namespace Pictionnary.Networking
             ConsoleHelper.Write("Waiting for packets ...");
         }
 
+
+        /// <summary>
+        /// Stop TCP Server
+        /// </summary>
         public void Stop()
         {
             //Request stop
             stopPending = true;
         }
 
+
+        /// <summary>
+        /// Start listening to queries
+        /// </summary>
         public void StartListening()
         {
             //init new TCP listener
@@ -83,6 +107,10 @@ namespace Pictionnary.Networking
             tcpListener.Start();
         }
 
+
+        /// <summary>
+        /// Accept connections from TCP Client
+        /// </summary>
         public void AcceptConnection()
         {
             //Until we request stop
@@ -118,6 +146,17 @@ namespace Pictionnary.Networking
             Thread.CurrentThread.Abort();
         }
 
+
+        public TCPServerInfos ToServerInfos()
+        {
+            return new TCPServerInfos(serverIP, serverPort, room);
+        }
+
+
+        /// <summary>
+        /// Accept packet from client
+        /// </summary>
+        /// <param name="socket"></param>
         public void AcceptPacket(Socket socket)
         {
             byte[] receiveBuffer = new byte[20480];
@@ -139,7 +178,6 @@ namespace Pictionnary.Networking
                 ConsoleHelper.Write("Thread " + Thread.CurrentThread.ManagedThreadId + " > Preparing for thread aborting");
                 socket.Close();
                 threadsList.Remove(Thread.CurrentThread);
-                Thread.CurrentThread.Abort();
             }
 
             //create a table with correct size ^^ 

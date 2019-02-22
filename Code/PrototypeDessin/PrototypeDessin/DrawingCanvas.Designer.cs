@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnl_canvas = new System.Windows.Forms.Panel();
             this.btn_black = new System.Windows.Forms.Button();
             this.btn_blue = new System.Windows.Forms.Button();
             this.btn_red = new System.Windows.Forms.Button();
@@ -37,20 +36,9 @@
             this.btn_white = new System.Windows.Forms.Button();
             this.nud_brushSize = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.pnl_canvas = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nud_brushSize)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pnl_canvas
-            // 
-            this.pnl_canvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnl_canvas.Location = new System.Drawing.Point(3, 67);
-            this.pnl_canvas.Name = "pnl_canvas";
-            this.pnl_canvas.Size = new System.Drawing.Size(466, 323);
-            this.pnl_canvas.TabIndex = 0;
-            this.pnl_canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_canvas_Paint);
-            this.pnl_canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseDown);
-            this.pnl_canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseMove);
-            this.pnl_canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseUp);
             // 
             // btn_black
             // 
@@ -60,6 +48,7 @@
             this.btn_black.TabIndex = 1;
             this.btn_black.Text = "Noir";
             this.btn_black.UseVisualStyleBackColor = true;
+            this.btn_black.Click += new System.EventHandler(this.btn_black_Click);
             // 
             // btn_blue
             // 
@@ -69,6 +58,7 @@
             this.btn_blue.TabIndex = 2;
             this.btn_blue.Text = "Bleu";
             this.btn_blue.UseVisualStyleBackColor = true;
+            this.btn_blue.Click += new System.EventHandler(this.btn_blue_Click);
             // 
             // btn_red
             // 
@@ -78,6 +68,7 @@
             this.btn_red.TabIndex = 3;
             this.btn_red.Text = "Rouge";
             this.btn_red.UseVisualStyleBackColor = true;
+            this.btn_red.Click += new System.EventHandler(this.btn_red_Click);
             // 
             // btn_green
             // 
@@ -87,6 +78,7 @@
             this.btn_green.TabIndex = 4;
             this.btn_green.Text = "Vert";
             this.btn_green.UseVisualStyleBackColor = true;
+            this.btn_green.Click += new System.EventHandler(this.btn_green_Click);
             // 
             // btn_yellow
             // 
@@ -96,6 +88,7 @@
             this.btn_yellow.TabIndex = 5;
             this.btn_yellow.Text = "Jaune";
             this.btn_yellow.UseVisualStyleBackColor = true;
+            this.btn_yellow.Click += new System.EventHandler(this.btn_yellow_Click);
             // 
             // btn_white
             // 
@@ -128,6 +121,7 @@
             0,
             0,
             0});
+            this.nud_brushSize.ValueChanged += new System.EventHandler(this.nud_brushSize_ValueChanged);
             // 
             // label1
             // 
@@ -137,6 +131,18 @@
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Taille de la brosse";
+            // 
+            // pnl_canvas
+            // 
+            this.pnl_canvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnl_canvas.Location = new System.Drawing.Point(3, 67);
+            this.pnl_canvas.Name = "pnl_canvas";
+            this.pnl_canvas.Size = new System.Drawing.Size(466, 323);
+            this.pnl_canvas.TabIndex = 0;
+            this.pnl_canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_canvas_Paint);
+            this.pnl_canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseDown);
+            this.pnl_canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseMove);
+            this.pnl_canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseUp);
             // 
             // DrawingCanvas
             // 
@@ -151,6 +157,7 @@
             this.Controls.Add(this.btn_blue);
             this.Controls.Add(this.btn_black);
             this.Controls.Add(this.pnl_canvas);
+            this.DoubleBuffered = true;
             this.Name = "DrawingCanvas";
             this.Size = new System.Drawing.Size(472, 393);
             ((System.ComponentModel.ISupportInitialize)(this.nud_brushSize)).EndInit();
@@ -160,8 +167,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel pnl_canvas;
         private System.Windows.Forms.Button btn_black;
         private System.Windows.Forms.Button btn_blue;
         private System.Windows.Forms.Button btn_red;
@@ -170,5 +175,6 @@
         private System.Windows.Forms.Button btn_white;
         private System.Windows.Forms.NumericUpDown nud_brushSize;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel pnl_canvas;
     }
 }

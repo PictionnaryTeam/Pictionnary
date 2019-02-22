@@ -8,3 +8,14 @@ E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\o
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csproj.GenerateResource.Cache
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.exe
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.pdb
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.exe.config
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.exe
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.pdb
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.DrawingCanvas.resources
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.Form1.resources
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.Properties.Resources.resources
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csproj.GenerateResource.Cache
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csproj.CoreCompileInputs.cache
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.exe
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.pdb
+C:\Users\stouderra\Desktop\TestGit\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csprojResolveAssemblyReference.cache

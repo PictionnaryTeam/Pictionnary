@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pictionnary.GameClasses
 {
+    [Serializable]
     class Room
     {
         public string Password { get; internal set; }

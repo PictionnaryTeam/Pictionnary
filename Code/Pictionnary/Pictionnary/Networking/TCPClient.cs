@@ -55,6 +55,7 @@ namespace Pictionnary.Networking
             catch (Exception e)
             {
                 Console.WriteLine("Error..... " + e.StackTrace);
+                System.Windows.Forms.MessageBox.Show(e.Message);
             }
             return null;
         }

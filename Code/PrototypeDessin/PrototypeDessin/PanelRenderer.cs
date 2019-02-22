@@ -11,21 +11,51 @@ namespace PrototypeDessin
     class PanelRenderer
     {
         Panel panelRendered;
-        List<Line> drawingToRender;
 
-        public PanelRenderer(Panel panelRendered, List<Line> drawingToRender)
+        public PanelRenderer(Panel panelRendered)
         {
             this.panelRendered = panelRendered;
-            this.drawingToRender = drawingToRender;
         }
 
-        public void Render()
+        public void Render(Drawing drawingToRender, PaintEventArgs paintEventArgs)
         {
-            foreach (Line currentLine in drawingToRender)
+            List<Line> lines = drawingToRender.Lines;
+            foreach (Line currentLine in lines)
             {
-                foreach (Pixel currentPixel in currentLine.Pixels)
+                /*foreach (Pixel currentPixel in currentLine.Pixels)
                 {
-                    panelRendered.CreateGraphics().DrawEllipse(new Pen(currentLine.LineColor), currentPixel.X, currentPixel.Y, currentLine.BrushSize, currentLine.BrushSize);
+                    paintEventArgs.Graphics.DrawEllipse(new Pen(currentLine.LineColor), currentPixel.X, currentPixel.Y, currentLine.BrushSize, currentLine.BrushSize);
+                }*/
+
+                /*for(int i = 0; i < lines.Count; ++i)
+                    {
+
+                    }*/
+
+                //int tempX = 0;
+                //int tempY = 0;
+                //bool isFirstLine = true;
+
+                //foreach (Pixel currentPixel in currentLine.Pixels)
+                //{
+                //    if (isFirstLine)
+                //    {
+                //        tempX = currentPixel.X;
+                //        tempY = currentPixel.Y;
+                //        isFirstLine = false;
+                //    }
+
+                //    paintEventArgs.Graphics.DrawLine(new Pen(currentLine.LineColor, currentLine.BrushSize), tempX, tempY, currentPixel.X, currentPixel.Y);
+                //    tempX = currentPixel.X;
+                //    tempY = currentPixel.Y;
+                //}
+
+                if(currentLine.Pixels.Count > 1)
+                {
+                    List<PointF> points = new List<PointF>();
+                    foreach (Pixel p in currentLine.Pixels) points.Add(new PointF(p.X, p.Y));
+
+                    paintEventArgs.Graphics.DrawLines(new Pen(currentLine.LineColor, currentLine.BrushSize), points.ToArray());
                 }
             }
         }

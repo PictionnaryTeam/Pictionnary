@@ -18,21 +18,23 @@ namespace PrototypeDessin
         Drawing _drawing;
         bool _isMouseClicked;
 
-        Line _currentLine;
+        int _currentBrushSize;
+        Color _currentBrushColor;
 
         public DrawingGenerator()
         {
             _isMouseClicked = false;
+            _drawing = new Drawing();
         }
 
         public void SetBrushSize(int newSize)
         {
-            _currentLine.BrushSize = newSize;
+            _currentBrushSize = newSize;
         }
 
         public void SetBrushColor(Color newColor)
         {
-            _currentLine.LineColor = newColor;
+            _currentBrushColor = newColor;
         }
 
         /// <summary>
@@ -41,7 +43,9 @@ namespace PrototypeDessin
         public void MouseHasBeenClicked(Point mousePos)
         {
             _isMouseClicked = true;
-            _currentLine = new Line();
+            _drawing.AddLine(new Line());
+            _drawing.Lines[_drawing.Lines.Count - 1].BrushSize = _currentBrushSize;
+            _drawing.Lines[_drawing.Lines.Count - 1].LineColor = _currentBrushColor;
         }
 
         /// <summary>
@@ -50,14 +54,20 @@ namespace PrototypeDessin
         public void MouseHasBeenReleased(Point mousePos)
         {
             _isMouseClicked = false;
-            _drawing.AddLine(_currentLine);
         }
 
         public void MouseHasBeenMoved(Point mousePos)
         {
             if(_isMouseClicked)
             {
-                _currentLine.AddPixel(new Pixel(mousePos.X, mousePos.Y));
+                if(_currentBrushColor == Color.White)
+                {
+                    TryToEraseAt(mousePos);
+                }
+                else
+                {
+                    _drawing.Lines[_drawing.Lines.Count - 1].AddPixel(new Pixel(mousePos.X, mousePos.Y));
+                }
             }
         }
 
@@ -66,6 +76,24 @@ namespace PrototypeDessin
             get
             {
                 return _drawing;
+            }
+        }
+
+        private void TryToEraseAt(Point pos)
+        {
+            for(int i = 0; i < _drawing.Lines.Count; ++i)
+            {
+                for(int j = 0; j < _drawing.Lines[i].Pixels.Count; ++j)
+                {
+                    Pixel P = _drawing.Lines[i].Pixels[j];
+                    float distance = (float)Math.Sqrt(Math.Abs((pos.X - P.X) * (pos.X - P.X) + (pos.Y - P.Y) * (pos.Y - P.Y)));
+
+                    if(distance < 5f)
+                    {
+                        _drawing.Lines.RemoveAt(i);
+                        break;
+                    }
+                }
             }
         }
     }
