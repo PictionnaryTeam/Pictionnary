@@ -38,7 +38,7 @@
             this.lblTimer = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timerGame = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxChatContent = new System.Windows.Forms.TextBox();
             this.pnlPlayers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).BeginInit();
             this.pnlTimer.SuspendLayout();
@@ -123,21 +123,23 @@
             this.label1.Text = "_ _ _ _ _ _ _ _ _";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // tbxChatContent
             // 
-            this.textBox1.Location = new System.Drawing.Point(798, 0);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(185, 579);
-            this.textBox1.TabIndex = 4;
+            this.tbxChatContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxChatContent.Location = new System.Drawing.Point(798, 0);
+            this.tbxChatContent.Multiline = true;
+            this.tbxChatContent.Name = "tbxChatContent";
+            this.tbxChatContent.ReadOnly = true;
+            this.tbxChatContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxChatContent.Size = new System.Drawing.Size(185, 572);
+            this.tbxChatContent.TabIndex = 4;
             // 
             // GameView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(983, 602);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxChatContent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.tbxChat);
@@ -145,6 +147,7 @@
             this.Name = "GameView";
             this.Text = "                                                                                 " +
     "                                                             Game view";
+            this.Load += new System.EventHandler(this.GameView_Load);
             this.pnlPlayers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).EndInit();
             this.pnlTimer.ResumeLayout(false);
@@ -165,6 +168,6 @@
         private System.Windows.Forms.PictureBox pbxRoomMaster;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timerGame;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxChatContent;
     }
 }

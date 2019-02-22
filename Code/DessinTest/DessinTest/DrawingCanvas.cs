@@ -14,9 +14,7 @@ namespace DessinTest
     public partial class DrawingCanvas : UserControl
     {
         Pen _pen;
-        List<List<Point>> points;
-
-        int activeListIndex;
+        List<Point> points;
 
         bool isMousePressed;
 
@@ -26,38 +24,34 @@ namespace DessinTest
         {
             InitializeComponent();
 
-            _pen = new Pen(Color.Black, 2);
+            DoubleBuffered = true;
 
-            points = new List<List<Point>>();
-            points.Add(new List<Point>());
+            _pen = new Pen(Color.Black, 4);
+
+            points = new List<Point>();
 
             isMousePressed = false;
 
             chrono = new Stopwatch();
             chrono.Start();
+
+            points.Add(new Point(30, 30));
         }
 
         private void pnl_canvas_Paint(object sender, PaintEventArgs e)
         {
-            Graphics graph = e.Graphics;
-
             if(points.Count > 1)
             {
-                foreach(List<Point> lines in points)
-                {
-                    //graph.DrawLine(_pen, points[points.Count - 1], points[points.Count - 2]);
-                    graph.DrawLines(_pen, lines.ToArray());
-                }
+                e.Graphics.DrawLines(_pen, points.ToArray());
             }
             
 
-            graph.Dispose();
+            //graph.Dispose();
         }
 
         private void pnl_canvas_MouseDown(object sender, MouseEventArgs e)
         {
             isMousePressed = true;
-            activeListIndex = points.IndexOf(points[points.Count - 1]);
         }
 
         private void pnl_canvas_MouseMove(object sender, MouseEventArgs e)
@@ -66,7 +60,7 @@ namespace DessinTest
             {
                 if (isMousePressed)
                 {
-                    points[activeListIndex].Add(e.Location);
+                    points.Add(e.Location);
                     Refresh();
                 }
 
@@ -78,12 +72,8 @@ namespace DessinTest
         {
             if(points.Count > 0)
             {
-                points.Remove(points.Last());
             }
             isMousePressed = false;
-
-
-            points.Add(new List<Point>());
         }
     }
 }

@@ -48,6 +48,8 @@ namespace Pictionnary.Networking.Managers
                 _clients = new List<TCPServerInfos>();
             }
 
+            _clients.RemoveAll(x => x.ServerIP == client.ServerIP);
+
             _clients.Add(client);
 
             return NetworkError.None;
