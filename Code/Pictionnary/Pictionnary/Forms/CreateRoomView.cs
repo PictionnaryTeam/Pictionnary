@@ -5,7 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-
+using Pictionnary.Other;
 
 namespace Pictionnary.Forms
 {
@@ -70,7 +70,9 @@ namespace Pictionnary.Forms
 
             MessageBox.Show("IP locale : " + Networking.NetworkingHelper.GetInstance().GetLocalAdress());
 
-            changeOfForm.ChangeOfForm(this, Other.DifferentForms.Game);
+            //changeOfForm.ChangeOfForm(this, Other.DifferentForms.Game);
+            FormManager.gameView.Show();
+            Hide();
         }
 
         /// <summary>

@@ -35,6 +35,7 @@
             this.lblThirdPlayerPoints = new System.Windows.Forms.Label();
             this.lblSecondPlayerPoints = new System.Windows.Forms.Label();
             this.lblFirstPlayerPoints = new System.Windows.Forms.Label();
+            this.btnContinue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -107,11 +108,22 @@
             this.lblFirstPlayerPoints.TabIndex = 4;
             this.lblFirstPlayerPoints.Text = "FirstPlayerPoints";
             // 
+            // btnContinue
+            // 
+            this.btnContinue.Location = new System.Drawing.Point(425, 297);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(75, 23);
+            this.btnContinue.TabIndex = 7;
+            this.btnContinue.Text = "Continuer";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
+            // 
             // RoundEnd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 332);
+            this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.lblThirdPlayerPoints);
             this.Controls.Add(this.lblSecondPlayerPoints);
             this.Controls.Add(this.lblFirstPlayerPoints);
@@ -136,5 +148,6 @@
         private System.Windows.Forms.Label lblThirdPlayerPoints;
         private System.Windows.Forms.Label lblSecondPlayerPoints;
         private System.Windows.Forms.Label lblFirstPlayerPoints;
+        private System.Windows.Forms.Button btnContinue;
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pictionnary.Other;
 
 namespace Pictionnary.Forms
 {
@@ -26,8 +27,15 @@ namespace Pictionnary.Forms
             }
         }
 
-    
-
-
+        /// <summary>
+        /// Goes to the round end view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnStopGame_Click(object sender, EventArgs e)
+        {
+            FormManager.roundEnd.Show();
+            Hide();
+        }
     }
 }

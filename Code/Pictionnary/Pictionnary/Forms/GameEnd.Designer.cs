@@ -126,6 +126,7 @@
             this.btnRestart.TabIndex = 7;
             this.btnRestart.Text = "Recommencer";
             this.btnRestart.UseVisualStyleBackColor = false;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // btnQuit
             // 
@@ -138,6 +139,7 @@
             this.btnQuit.TabIndex = 8;
             this.btnQuit.Text = "Quitter";
             this.btnQuit.UseVisualStyleBackColor = false;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // pictureBox1
             // 

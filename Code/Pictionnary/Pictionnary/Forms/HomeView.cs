@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Pictionnary.Other;
 
 namespace Pictionnary.Forms
 {
@@ -19,18 +20,25 @@ namespace Pictionnary.Forms
             ActiveControl = lblTitle;
         }
 
+        /// <summary>
+        /// Goes to the create room view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnCreateRoom_Click(object sender, EventArgs e)
         {
-            CreateRoomView createRoom = new CreateRoomView();
-
-            createRoom.Show();
+            FormManager.createRoomView.Show();
             Hide();
         }
 
+        /// <summary>
+        /// Goes to the join room view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnJoinRoom_Click(object sender, EventArgs e)
         {
-            JoinRoomView joinRoom = new JoinRoomView();
-            joinRoom.Show();
+            FormManager.joinRoomView.Show();
             Hide();
         }
     }
