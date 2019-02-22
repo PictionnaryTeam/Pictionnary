@@ -1,11 +1,7 @@
 ﻿using Pictionnary.Networking;
-<<<<<<< HEAD
 using Pictionnary.Networking.Managers;
 using Pictionnary.Networking.Objects.EventArgs;
-using Pictionnary.Networking.Objects.Packets.Client;
-=======
 using Pictionnary.Other;
->>>>>>> 2d87e423cf6bbe735a7a3352462db8b2746356ca
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -33,7 +29,6 @@ namespace Pictionnary.Forms
             EventsManager.OnChatMessageReceive += new EventsManager.OnChatMessageReceiveEventHandler(OnMessageReceive);
         }
 
-<<<<<<< HEAD
         private void GameView_Load(object sender, EventArgs e)
         {
 
@@ -41,15 +36,15 @@ namespace Pictionnary.Forms
 
         private void OnMessageReceive(OnChatMessageReceiveEventArgs e)
         {
-            lblChat.Invoke(new MethodInvoker(() => { lblChat.Text += ($"{e.Sender} ({e.Time.ToShortTimeString()}) : {e.Message}\n"); }));
+            tbxChatContent.Invoke(new MethodInvoker(() => { tbxChatContent.Text += ($"{e.Sender} ({e.Time.ToShortTimeString()}) : {e.Message}\n"); }));
         }
 
         private void btnStopGame_Click(object sender, EventArgs e)
         {
             NetworkingHelper.GetInstance().SendMessageToChat("HALLO");
-=======
+        }
 
-        void Tbx_KeyDown(object sender, PreviewKeyDownEventArgs e)
+        private void Tbx_KeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -71,6 +66,8 @@ namespace Pictionnary.Forms
                 tbxChat.Text = "";
             }
         }
+
+        /*
         /// <summary>
         /// Goes to the round end view
         /// </summary>
@@ -80,7 +77,7 @@ namespace Pictionnary.Forms
         {
             FormManager.roundEnd.Show();
             Hide();
->>>>>>> 2d87e423cf6bbe735a7a3352462db8b2746356ca
         }
+        */
     }
 }
