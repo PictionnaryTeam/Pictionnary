@@ -13,6 +13,7 @@ E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csproj.GenerateResource.Cache
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.exe
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.pdb
+<<<<<<< HEAD
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe.config
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.pdb
@@ -29,3 +30,6 @@ C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debu
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csproj.GenerateResource.Cache
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.exe
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.pdb
+=======
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csprojResolveAssemblyReference.cache
+>>>>>>> 7f9773074d318d24d638423234a93697646e230a

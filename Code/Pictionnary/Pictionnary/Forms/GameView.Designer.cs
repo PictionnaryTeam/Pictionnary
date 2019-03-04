@@ -158,6 +158,7 @@
             this.Text = "                                                                                 " +
     "                                                             Game view";
             this.Load += new System.EventHandler(this.GameView_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameView_Paint);
             this.pnlPlayers.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).EndInit();
             this.pnlTimer.ResumeLayout(false);

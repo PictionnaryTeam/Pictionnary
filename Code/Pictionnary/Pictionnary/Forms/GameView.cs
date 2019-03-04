@@ -29,15 +29,36 @@ namespace Pictionnary.Forms
         // "toile" sur laquelle on peut afficher les dessins
         Panel _renderOnlyCanvas;
 
+        bool _isCurrentClientDrawing;
+
+        /// <summary>
+        /// Permet d'afficher l'éditeur de dessin
+        /// </summary>
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
+
         public GameView()
         {
             InitializeComponent();
 
-            _renderOnlyCanvas = new Panel();
-            _drawingCanvas = new DrawingEditor.DrawingCanvasBlindMode();
+            _drawingCanvas = new DrawingEditor.DrawingCanvasNormalMode();
             _drawingCanvas.Location = new System.Drawing.Point(182, 50);
-            Controls.Add(_renderOnlyCanvas);
-            Controls.Add(_drawingCanvas);
+            _drawingCanvas.Size = new System.Drawing.Size(616, 600);
+
+            _renderOnlyCanvas = new Panel();
+            _renderOnlyCanvas.BackColor = System.Drawing.Color.White;
+            _renderOnlyCanvas.Size = new System.Drawing.Size(610, 460);
+            _renderOnlyCanvas.Location = new System.Drawing.Point(185, 50);
+
+            _isCurrentClientDrawing = true;
+            updateDrawingMode();
 
             tbxChat.PreviewKeyDown += new PreviewKeyDownEventHandler(Tbx_KeyDown);
 
@@ -77,6 +98,19 @@ namespace Pictionnary.Forms
             }
         }
 
+        private void updateDrawingMode()
+        {
+            if(_isCurrentClientDrawing)
+            {
+                Controls.Remove(_renderOnlyCanvas);
+                Controls.Add(_drawingCanvas);
+            }
+            else
+            {
+                Controls.Remove(_drawingCanvas);
+                Controls.Add(_renderOnlyCanvas);
+            }
+        }
         
         /// <summary>
         /// Goes to the round end view
@@ -133,6 +167,16 @@ namespace Pictionnary.Forms
                 Show();
                 roundTimer.Start();
                 roundStartTime = DateTime.Now;
+            }
+        }
+
+        private void GameView_Paint(object sender, PaintEventArgs e)
+        {
+            if(!_isCurrentClientDrawing)
+            {
+                DrawingEditor.Drawing todraw = new DrawingEditor.Drawing();
+                DrawingEditor.PanelRenderer renderer = new DrawingEditor.PanelRenderer(_renderOnlyCanvas);
+                renderer.Render(todraw, e);
             }
         }
     }
