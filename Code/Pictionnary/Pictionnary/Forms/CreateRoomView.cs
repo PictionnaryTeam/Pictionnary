@@ -72,6 +72,7 @@ namespace Pictionnary.Forms
 
             //changeOfForm.ChangeOfForm(this, Other.DifferentForms.Game);
             FormManager.gameView.Show();
+            FormManager.gameView.RoundAmount = (int)numUpDownGamesLimit.Value;
             Hide();
         }
 
@@ -121,6 +122,5 @@ namespace Pictionnary.Forms
             return listOfThemes;
 
         }
-
     }
 }

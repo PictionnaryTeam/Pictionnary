@@ -37,8 +37,9 @@
             this.pnlTimer = new System.Windows.Forms.Panel();
             this.lblTimer = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.timerGame = new System.Windows.Forms.Timer(this.components);
+            this.roundTimer = new System.Windows.Forms.Timer(this.components);
             this.tbxChatContent = new System.Windows.Forms.TextBox();
+            this.endRoundTimer = new System.Windows.Forms.Timer(this.components);
             this.pnlPlayers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxRoomMaster)).BeginInit();
             this.pnlTimer.SuspendLayout();
@@ -123,6 +124,10 @@
             this.label1.Text = "_ _ _ _ _ _ _ _ _";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // roundTimer
+            // 
+            this.roundTimer.Tick += new System.EventHandler(this.roundTimer_Tick);
+            // 
             // tbxChatContent
             // 
             this.tbxChatContent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -133,6 +138,11 @@
             this.tbxChatContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxChatContent.Size = new System.Drawing.Size(185, 572);
             this.tbxChatContent.TabIndex = 4;
+            // 
+            // endRoundTimer
+            // 
+            this.endRoundTimer.Interval = 1000;
+            this.endRoundTimer.Tick += new System.EventHandler(this.endRoundTimer_Tick);
             // 
             // GameView
             // 
@@ -167,7 +177,8 @@
         private System.Windows.Forms.Panel pnlPlayersPoints;
         private System.Windows.Forms.PictureBox pbxRoomMaster;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timerGame;
+        private System.Windows.Forms.Timer roundTimer;
         private System.Windows.Forms.TextBox tbxChatContent;
+        private System.Windows.Forms.Timer endRoundTimer;
     }
 }
