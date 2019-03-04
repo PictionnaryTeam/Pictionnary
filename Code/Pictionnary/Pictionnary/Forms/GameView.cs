@@ -67,21 +67,6 @@ namespace Pictionnary.Forms
 
                 NetworkingHelper.GetInstance().SendMessageToChat(enteredText);
 
-                /*
-                string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
-
-                if (enteredText.RefactorText() == wordToFind.RefactorText())
-                {
-                    //Show to everyone that he found the word
-                    //{player.Name} a trouvé le mot
-                }
-                else
-                {
-                    //Show to everyone the word that the player tried by using entered text
-                    //{player.Name} a proposé le mot {enteredText}
-                }
-                */
-
                 tbxChat.Clear();
             }
         }

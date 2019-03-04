@@ -80,6 +80,7 @@
     <Compile Include="Forms\RoundEnd.Designer.cs">
       <DependentUpon>RoundEnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameClasses\ScoreManager.cs" />
     <Compile Include="GameClasses\Drawing.cs" />
     <Compile Include="GameClasses\DrawingCanvasBlindMode.cs">
       <SubType>UserControl</SubType>
