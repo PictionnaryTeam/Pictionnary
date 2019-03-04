@@ -7,3 +7,4 @@ E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\D
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.csproj.GenerateResource.Cache
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.exe
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.pdb
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\DessinTest\DessinTest\obj\Debug\DessinTest.csprojResolveAssemblyReference.cache
