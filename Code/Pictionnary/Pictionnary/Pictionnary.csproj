@@ -80,6 +80,7 @@
     <Compile Include="Forms\RoundEnd.Designer.cs">
       <DependentUpon>RoundEnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameClasses\ScoreManager.cs" />
     <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
     <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
     <Compile Include="Networking\Handlers\RegisterPacketHandler.cs" />
