@@ -142,12 +142,13 @@
             this.pnl_canvas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl_canvas.Location = new System.Drawing.Point(3, 67);
             this.pnl_canvas.Name = "pnl_canvas";
-            this.pnl_canvas.Size = new System.Drawing.Size(466, 323);
+            this.pnl_canvas.Size = new System.Drawing.Size(610, 460);
             this.pnl_canvas.TabIndex = 0;
             this.pnl_canvas.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_canvas_Paint);
             this.pnl_canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseDown);
             this.pnl_canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseMove);
             this.pnl_canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pnl_canvas_MouseUp);
+            this.pnl_canvas.BackColor = System.Drawing.Color.White;
             // 
             // DrawingCanvasTemplate
             // 

@@ -13,3 +13,4 @@ E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csproj.GenerateResource.Cache
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.exe
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.pdb
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csprojResolveAssemblyReference.cache
