@@ -10,7 +10,18 @@ namespace Pictionnary.Forms
 {
     public partial class GameView : Form
     {
+        public int RoundAmount { get; set; }
+        public bool UnlimitedRounds { get; set; }
+        private int roundsPassed = 0;
+
         Dictionary<string, int> PlayersPoints = new Dictionary<string, int>();
+
+        DateTime roundStartTime;
+        DateTime gameProgressTime;
+        TimeSpan timerTime;
+        TimeSpan leftTime;
+        int endRoundCounter = 0;
+        double roundTimeSelected = 20;
 
         // Éditeur de dessin
         DrawingEditor.DrawingCanvasTemplate _drawingCanvas;
@@ -62,21 +73,6 @@ namespace Pictionnary.Forms
 
                 NetworkingHelper.GetInstance().SendMessageToChat(enteredText);
 
-                /*
-                string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
-
-                if (enteredText.RefactorText() == wordToFind.RefactorText())
-                {
-                    //Show to everyone that he found the word
-                    //{player.Name} a trouvé le mot
-                }
-                else
-                {
-                    //Show to everyone the word that the player tried by using entered text
-                    //{player.Name} a proposé le mot {enteredText}
-                }
-                */
-
                 tbxChat.Clear();
             }
         }
@@ -92,6 +88,52 @@ namespace Pictionnary.Forms
             FormManager.roundEnd.Show();
             Hide();
         }
-        
+
+        private void StartRound()
+        {
+            roundTimer.Start();
+            leftTime = TimeSpan.FromSeconds(roundTimeSelected);
+            roundStartTime = DateTime.Now;
+        }
+
+        private void roundTimer_Tick(object sender, EventArgs e)
+        {
+            gameProgressTime = DateTime.Now;
+            timerTime = leftTime - (gameProgressTime - roundStartTime);
+            lblTimer.Text = (timerTime.Minutes.ToString("0#") + ":" + timerTime.Seconds.ToString("0#"));
+
+            if (timerTime.Minutes == 0 && timerTime.Seconds == 0)
+            {
+                ++roundsPassed;
+                roundTimer.Stop();
+
+                if (roundsPassed == RoundAmount && !UnlimitedRounds)
+                {
+                    Hide();
+                    FormManager.gameEnd.Show();
+                }
+                else
+                {
+                    Hide();
+                    FormManager.roundEnd.Show();
+                    endRoundTimer.Start();
+                }
+            }
+        }
+
+        private void endRoundTimer_Tick(object sender, EventArgs e)
+        {
+            endRoundCounter++;
+
+            if (endRoundCounter == 15)
+            {
+                endRoundTimer.Stop();
+                endRoundCounter = 0;
+                FormManager.roundEnd.Hide();
+                Show();
+                roundTimer.Start();
+                roundStartTime = DateTime.Now;
+            }
+        }
     }
 }

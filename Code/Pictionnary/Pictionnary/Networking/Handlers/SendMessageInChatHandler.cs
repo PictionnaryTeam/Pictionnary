@@ -1,13 +1,10 @@
-﻿using Pictionnary.Networking.Objects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Pictionnary.Networking.Objects.Packets;
-using Pictionnary.Networking.Objects.Packets.Server;
+﻿using Pictionnary.GameClasses;
 using Pictionnary.Networking.Managers;
+using Pictionnary.Networking.Objects;
+using Pictionnary.Networking.Objects.Packets;
 using Pictionnary.Networking.Objects.Packets.Client;
+using Pictionnary.Networking.Objects.Packets.Server;
+using Pictionnary.Other;
 
 namespace Pictionnary.Networking.Handlers
 {
@@ -15,10 +12,22 @@ namespace Pictionnary.Networking.Handlers
     {
         public override Packet OnPacketReceive(Packet receivedPacket)
         {
+            ClientSendChatMessageEventPacket p = (receivedPacket as ClientSendChatMessageEventPacket);
+
+            string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
+
+            if (p.Message.RefactorText() == wordToFind.RefactorText())
+            {
+                //Show to everyone that he found the word
+                p.Message = $"{p.Time.ToShortTimeString()} : {p.Sender} a trouvé le mot";
+
+                ScoreManager.GetInstance().PlayerFoundWord(p.Sender, p.Time);
+            }
+
             EventsManager.OnChatMessageReceive?.Invoke(new Objects.EventArgs.OnChatMessageReceiveEventArgs(
-                (receivedPacket as ClientSendChatMessageEventPacket).Sender, 
-                (receivedPacket as ClientSendChatMessageEventPacket).Message, 
-                (receivedPacket as ClientSendChatMessageEventPacket).Time)
+                p.Sender,
+                p.Message,
+                p.Time)
             );
 
             ClientsManager.SendPacketToEveryClients(receivedPacket);

@@ -95,7 +95,28 @@
     <Compile Include="Forms\RoundEnd.Designer.cs">
       <DependentUpon>RoundEnd.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="GameClasses\DrawingRelated\Line.cs" />
+=======
+    <Compile Include="GameClasses\ScoreManager.cs" />
+    <Compile Include="GameClasses\Drawing.cs" />
+    <Compile Include="GameClasses\DrawingCanvasBlindMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingCanvasNormalMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingCanvasOneLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingCanvasTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingGenerator.cs" />
+    <Compile Include="GameClasses\Line.cs" />
+    <Compile Include="GameClasses\PanelRenderer.cs" />
+    <Compile Include="GameClasses\Pixel.cs" />
+>>>>>>> 21ba54b07f9c86ac4b90bfd7326a3fc2311547c7
     <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
     <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
     <Compile Include="Networking\Handlers\RegisterPacketHandler.cs" />

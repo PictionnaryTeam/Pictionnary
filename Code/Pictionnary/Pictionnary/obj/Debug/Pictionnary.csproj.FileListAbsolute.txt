@@ -45,6 +45,7 @@ C:\Users\cherpillle\source\repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\De
 C:\Users\cherpillle\source\repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.HomeView.resources
 C:\Users\cherpillle\source\repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.JoinRoomView.resources
 C:\Users\cherpillle\source\repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.RoundEnd.resources
+<<<<<<< HEAD
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csprojResolveAssemblyReference.cache
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.CreateRoomView.resources
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameEnd.resources
@@ -61,3 +62,20 @@ E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\bin\Debug
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.pdb
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\bin\Debug\CheckComboBox.pdb
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.GameClasses.DrawingRelated.DrawingCanvasTemplate.resources
+=======
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csprojResolveAssemblyReference.cache
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.CreateRoomView.resources
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameEnd.resources
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameView.resources
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.HomeView.resources
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.JoinRoomView.resources
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.RoundEnd.resources
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Properties.Resources.resources
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csproj.GenerateResource.Cache
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.exe
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.pdb
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe.config
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.pdb
+D:\DATA\santosrean\Code\Pictionnary\Pictionnary\bin\Debug\CheckComboBox.pdb
+>>>>>>> 21ba54b07f9c86ac4b90bfd7326a3fc2311547c7

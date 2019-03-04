@@ -1,12 +1,7 @@
-﻿using Pictionnary.Networking;
-using Pictionnary.Networking.Managers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Pictionnary.Forms;
+﻿using Pictionnary.Networking.Managers;
 using Pictionnary.Other;
+using System;
+using System.Windows.Forms;
 
 namespace Pictionnary
 {
