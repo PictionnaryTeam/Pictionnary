@@ -52,15 +52,25 @@ namespace Pictionnary.Networking
         }
 
 
+        /// <summary>
+        /// Set client's pseudo (default is ip)
+        /// </summary>
+        /// <param name="pseudo"></param>
         public void SetPseudo(string pseudo)
         {
+            //Set value
             Server.Pseudo = pseudo;
         }
 
 
+        /// <summary>
+        /// Get local ip adress
+        /// </summary>
+        /// <returns></returns>
         public string GetLocalAdress()
         {
-            return Helpers.NetworkHelper.GetLocalAdress();
+            //return ip
+            return NetworkHelper.GetLocalAdress();
         }
 
 
@@ -166,10 +176,17 @@ namespace Pictionnary.Networking
         }
 
 
+        /// <summary>
+        /// Send a message to the chat
+        /// </summary>
+        /// <param name="message"></param>
+        /// <returns></returns>
         public NetworkError SendMessageToChat(string message)
         {
+            //Connected
             if (_server.Room != null)
             {
+                //Display message before send it
                 EventsManager.OnChatMessageReceive?.Invoke(new Objects.EventArgs.OnChatMessageReceiveEventArgs(Server.Pseudo, message, DateTime.Now));
             }
 
