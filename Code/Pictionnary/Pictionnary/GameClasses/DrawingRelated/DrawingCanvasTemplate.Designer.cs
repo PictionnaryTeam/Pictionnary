@@ -1,4 +1,4 @@
-﻿namespace PrototypeDessin
+﻿namespace DrawingEditor
 {
     partial class DrawingCanvasTemplate
     {

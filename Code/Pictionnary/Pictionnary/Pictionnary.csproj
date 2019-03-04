@@ -49,6 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GameClasses\DrawingRelated\Drawing.cs" />
+    <Compile Include="GameClasses\DrawingRelated\DrawingCanvasBlindMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingRelated\DrawingCanvasNormalMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingRelated\DrawingCanvasOneLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingRelated\DrawingCanvasTemplate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameClasses\DrawingRelated\DrawingCanvasTemplate.Designer.cs" />
+    <Compile Include="GameClasses\DrawingRelated\DrawingGenerator.cs" />
     <Compile Include="Forms\ChangeForm.cs" />
     <Compile Include="Forms\CreateRoomView.cs">
       <SubType>Form</SubType>
@@ -80,23 +95,7 @@
     <Compile Include="Forms\RoundEnd.Designer.cs">
       <DependentUpon>RoundEnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="GameClasses\Drawing.cs" />
-    <Compile Include="GameClasses\DrawingCanvasBlindMode.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingCanvasNormalMode.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingCanvasOneLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingCanvasTemplate.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingGenerator.cs" />
-    <Compile Include="GameClasses\Line.cs" />
-    <Compile Include="GameClasses\PanelRenderer.cs" />
-    <Compile Include="GameClasses\Pixel.cs" />
+    <Compile Include="GameClasses\DrawingRelated\Line.cs" />
     <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
     <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
     <Compile Include="Networking\Handlers\RegisterPacketHandler.cs" />
@@ -134,7 +133,6 @@
       <DependentUpon>GameEnd.cs</DependentUpon>
     </Compile>
     <Compile Include="Other\Constants.cs" />
-    <Compile Include="GameClasses\DrawOption.cs" />
     <Compile Include="GameClasses\Game.cs" />
     <Compile Include="GameClasses\GameManager.cs" />
     <Compile Include="GameClasses\Theme.cs" />
@@ -142,6 +140,8 @@
     <Compile Include="Other\DifferentFormsEnum.cs" />
     <Compile Include="Other\FormManager.cs" />
     <Compile Include="Other\StringExt.cs" />
+    <Compile Include="GameClasses\DrawingRelated\PanelRenderer.cs" />
+    <Compile Include="GameClasses\DrawingRelated\Pixel.cs" />
     <Compile Include="PlayerClasses\Player.cs" />
     <Compile Include="Other\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -163,6 +163,7 @@
     <EmbeddedResource Include="Forms\RoundEnd.resx">
       <DependentUpon>RoundEnd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GameClasses\DrawingRelated\DrawingCanvasTemplate.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
