@@ -97,23 +97,6 @@
     </Compile>
     <Compile Include="GameClasses\DrawingRelated\Line.cs" />
     <Compile Include="GameClasses\ScoreManager.cs" />
-    <Compile Include="GameClasses\Drawing.cs" />
-    <Compile Include="GameClasses\DrawingCanvasBlindMode.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingCanvasNormalMode.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingCanvasOneLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingCanvasTemplate.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="GameClasses\DrawingGenerator.cs" />
-    <Compile Include="GameClasses\Line.cs" />
-    <Compile Include="GameClasses\PanelRenderer.cs" />
-    <Compile Include="GameClasses\Pixel.cs" />
     <Compile Include="Networking\Handlers\PingPacketHandler.cs" />
     <Compile Include="Networking\Handlers\PointsPacketHandler.cs" />
     <Compile Include="Networking\Handlers\RegisterPacketHandler.cs" />
@@ -153,8 +136,6 @@
     <Compile Include="Other\Constants.cs" />
     <Compile Include="GameClasses\Game.cs" />
     <Compile Include="GameClasses\GameManager.cs" />
-    <Compile Include="GameClasses\Theme.cs" />
-    <Compile Include="GameClasses\Timer.cs" />
     <Compile Include="Other\DifferentFormsEnum.cs" />
     <Compile Include="Other\FormManager.cs" />
     <Compile Include="Other\StringExt.cs" />
