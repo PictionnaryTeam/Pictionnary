@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameEnd));
             this.lblGameEnd = new System.Windows.Forms.Label();
             this.lblFirstPlace = new System.Windows.Forms.Label();
             this.lblSecondPlace = new System.Windows.Forms.Label();
@@ -211,6 +212,7 @@
             this.Controls.Add(this.lblSecondPlace);
             this.Controls.Add(this.lblFirstPlace);
             this.Controls.Add(this.lblGameEnd);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameEnd";
             this.Text = "GameEnd";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

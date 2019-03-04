@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameView));
             this.pnlPlayers = new System.Windows.Forms.Panel();
             this.pnlPlayersPoints = new System.Windows.Forms.Panel();
             this.pbxRoomMaster = new System.Windows.Forms.PictureBox();
@@ -154,6 +155,7 @@
             this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.tbxChat);
             this.Controls.Add(this.pnlPlayers);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameView";
             this.Text = "                                                                                 " +
     "                                                             Game view";

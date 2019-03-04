@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JoinRoomView));
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtBoxIPRoom = new System.Windows.Forms.TextBox();
             this.lblIPRoom = new System.Windows.Forms.Label();
@@ -103,6 +104,7 @@
             this.Controls.Add(this.txtBoxIPRoom);
             this.Controls.Add(this.lblIPRoom);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "JoinRoomView";
             this.Text = "                                                      Rejoindre une room";
             this.ResumeLayout(false);
