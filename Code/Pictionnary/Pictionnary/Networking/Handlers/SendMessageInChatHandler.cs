@@ -14,15 +14,15 @@ namespace Pictionnary.Networking.Handlers
         {
             ClientSendChatMessageEventPacket p = (receivedPacket as ClientSendChatMessageEventPacket);
 
-            //string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
+            string wordToFind = NetworkingHelper.GetInstance().Server.Room.Word;
 
-            //if (p.Message.RefactorText() == wordToFind.RefactorText())
-            //{
-            //    //Show to everyone that he found the word
-            //    p.Message = $"{p.Time.ToShortTimeString()} : {p.Sender} a trouvé le mot";
+            if (p.Message.RefactorText() == wordToFind.RefactorText())
+            {
+                //Show to everyone that he found the word
+                p.Message = $"{p.Time.ToShortTimeString()} : {p.Sender} a trouvé le mot";
 
-            //    ScoreManager.GetInstance().PlayerFoundWord(p.Sender, p.Time);
-            //}
+                ScoreManager.GetInstance().PlayerFoundWord(p.Sender, p.Time);
+            }
 
             EventsManager.OnChatMessageReceive?.Invoke(new Objects.EventArgs.OnChatMessageReceiveEventArgs(
                 p.Sender,

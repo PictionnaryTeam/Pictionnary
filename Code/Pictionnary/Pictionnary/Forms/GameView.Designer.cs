@@ -155,7 +155,6 @@
             this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.tbxChat);
             this.Controls.Add(this.pnlPlayers);
-            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameView";
             this.Text = "                                                                                 " +
