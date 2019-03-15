@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoundEnd));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblFirstPlayerName = new System.Windows.Forms.Label();
             this.lblSecondPlayerName = new System.Windows.Forms.Label();
@@ -131,8 +132,8 @@
             this.Controls.Add(this.lblSecondPlayerName);
             this.Controls.Add(this.lblFirstPlayerName);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RoundEnd";
-            this.ShowIcon = false;
             this.Text = "RoundEnd";
             this.ResumeLayout(false);
             this.PerformLayout();
