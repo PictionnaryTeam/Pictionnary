@@ -57,6 +57,7 @@ namespace Pictionnary.Networking.Helpers
             BinaryFormatter byteFormatter = new BinaryFormatter();
 
             //deserialize as packet
+            memoryStream.Position = 0;
             Packet deserializedPacket = byteFormatter.Deserialize(memoryStream) as Packet;
 
             return deserializedPacket;

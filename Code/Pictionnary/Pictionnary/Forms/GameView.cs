@@ -28,7 +28,7 @@ namespace Pictionnary.Forms
         DrawingEditor.Drawing _receivedDrawing;
 
         // "toile" sur laquelle on peut afficher les dessins
-        Panel _renderOnlyCanvas;
+        BufferedPanel _renderOnlyCanvas;
 
         bool _isCurrentClientDrawing;
 
@@ -66,7 +66,7 @@ namespace Pictionnary.Forms
             DrawingCanvas.Location = new System.Drawing.Point(182, 50);
             DrawingCanvas.Size = new System.Drawing.Size(616, 600);
 
-            _renderOnlyCanvas = new Panel();
+            _renderOnlyCanvas = new BufferedPanel();
             _renderOnlyCanvas.BackColor = System.Drawing.Color.White;
             _renderOnlyCanvas.Size = new System.Drawing.Size(610, 460);
             _renderOnlyCanvas.Location = new System.Drawing.Point(185, 50);
@@ -116,15 +116,17 @@ namespace Pictionnary.Forms
 
         private void updateDrawingMode()
         {
-            if(_isCurrentClientDrawing)
+            if (_isCurrentClientDrawing)
             {
                 Controls.Remove(_renderOnlyCanvas);
                 Controls.Add(DrawingCanvas);
+                DrawingCanvas.BringToFront();
             }
             else
             {
                 Controls.Remove(DrawingCanvas);
                 Controls.Add(_renderOnlyCanvas);
+                _renderOnlyCanvas.BringToFront();
             }
         }
         

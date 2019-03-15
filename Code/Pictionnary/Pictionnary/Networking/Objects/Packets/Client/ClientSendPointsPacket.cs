@@ -9,7 +9,7 @@ namespace Pictionnary.Networking.Objects.Packets.Client
     class ClientSendPointsPacket : Packet
     {
         Drawing _points;
-        public ClientSendPointsPacket(Drawing points) : base(PacketType.CLIENTPACKETPING)
+        public ClientSendPointsPacket(Drawing points) : base(PacketType.CLIENTPACKETPOINTS)
         {
             _points = points;
         }

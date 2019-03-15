@@ -164,7 +164,7 @@ namespace Pictionnary.Networking
         /// <param name="socket"></param>
         public void AcceptPacket(Socket socket)
         {
-            byte[] receiveBuffer = new byte[20480];
+            byte[] receiveBuffer = new byte[102400];
 
             //receive data
             int k = 0;
