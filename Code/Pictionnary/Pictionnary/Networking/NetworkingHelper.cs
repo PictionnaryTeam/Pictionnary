@@ -4,6 +4,7 @@ using Pictionnary.Networking.Managers;
 using Pictionnary.Networking.Objects;
 using Pictionnary.Networking.Objects.Packets.Client;
 using Pictionnary.Networking.Objects.Packets.Server;
+using Pictionnary.Other;
 using System;
 
 namespace Pictionnary.Networking
@@ -131,6 +132,8 @@ namespace Pictionnary.Networking
         {
             //Set values
             _server.Room = room;
+
+            FormManager.gameView.IsCurrentClientDrawing = true;
         }
 
 
@@ -192,6 +195,23 @@ namespace Pictionnary.Networking
 
             //Send packet and get response
             ServerResponsePacket response = TCPClient.SendPacket(new ClientSendChatMessageEventPacket(Server.Pseudo, message)) as ServerResponsePacket;
+
+            //No result
+            if (response == null)
+            {
+                //Unknown ip
+                return NetworkError.UnknownIp;
+            }
+
+            //Return error
+            return response.Error;
+        }
+
+        
+        public NetworkError SendPointsToEverybody()
+        {
+            //Send packet and get response
+            ServerResponsePacket response = TCPClient.SendPacket(new ClientSendPointsPacket(FormManager.gameView.DrawingCanvas.GetDrawing())) as ServerResponsePacket;
 
             //No result
             if (response == null)

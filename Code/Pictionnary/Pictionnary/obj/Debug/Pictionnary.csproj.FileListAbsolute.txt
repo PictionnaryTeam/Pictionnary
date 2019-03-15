@@ -1,24 +1,7 @@
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe.config
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.pdb
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\bin\Debug\CheckComboBox.pdb
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.CreateRoomView.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameEnd.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameView.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.HomeView.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.JoinRoomView.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.RoundEnd.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.GameClasses.DrawingRelated.DrawingCanvasTemplate.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Properties.Resources.resources
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csproj.GenerateResource.Cache
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.exe
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.pdb
-<<<<<<< HEAD
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe.config
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.exe
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\Pictionnary.pdb
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\bin\Debug\CheckComboBox.pdb
-C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csprojResolveAssemblyReference.cache
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.CreateRoomView.resources
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameEnd.resources
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.Forms.GameView.resources
@@ -30,6 +13,4 @@ C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debu
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csproj.GenerateResource.Cache
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.exe
 C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.pdb
-=======
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csprojResolveAssemblyReference.cache
->>>>>>> 7f9773074d318d24d638423234a93697646e230a
+C:\Users\roulinch\Source\Repos\Pictionnary\Code\Pictionnary\Pictionnary\obj\Debug\Pictionnary.csprojResolveAssemblyReference.cache

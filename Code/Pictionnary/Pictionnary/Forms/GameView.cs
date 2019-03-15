@@ -24,12 +24,17 @@ namespace Pictionnary.Forms
         double roundTimeSelected = 20;
 
         // Éditeur de dessin
-        DrawingEditor.DrawingCanvasTemplate _drawingCanvas;
+        public DrawingEditor.DrawingCanvasTemplate DrawingCanvas { get; private set; }
+        DrawingEditor.Drawing _receivedDrawing;
 
         // "toile" sur laquelle on peut afficher les dessins
         Panel _renderOnlyCanvas;
 
         bool _isCurrentClientDrawing;
+
+        public bool IsCurrentClientDrawing { get => _isCurrentClientDrawing; set { _isCurrentClientDrawing = value; updateDrawingMode(); } }
+
+
 
         /// <summary>
         /// Permet d'afficher l'éditeur de dessin
@@ -44,20 +49,31 @@ namespace Pictionnary.Forms
             }
         }
 
+
+        public void SetDrawing(DrawingEditor.Drawing newDrawing)
+        {
+            if(!_isCurrentClientDrawing)
+            {
+                _receivedDrawing = newDrawing;
+            }
+        }
+
         public GameView()
         {
             InitializeComponent();
 
-            _drawingCanvas = new DrawingEditor.DrawingCanvasNormalMode();
-            _drawingCanvas.Location = new System.Drawing.Point(182, 50);
-            _drawingCanvas.Size = new System.Drawing.Size(616, 600);
+            DrawingCanvas = new DrawingEditor.DrawingCanvasNormalMode();
+            DrawingCanvas.Location = new System.Drawing.Point(182, 50);
+            DrawingCanvas.Size = new System.Drawing.Size(616, 600);
 
             _renderOnlyCanvas = new Panel();
             _renderOnlyCanvas.BackColor = System.Drawing.Color.White;
             _renderOnlyCanvas.Size = new System.Drawing.Size(610, 460);
             _renderOnlyCanvas.Location = new System.Drawing.Point(185, 50);
 
-            _isCurrentClientDrawing = true;
+            _receivedDrawing = new DrawingEditor.Drawing();
+
+            _isCurrentClientDrawing = false;
             updateDrawingMode();
 
             tbxChat.PreviewKeyDown += new PreviewKeyDownEventHandler(Tbx_KeyDown);
@@ -103,11 +119,11 @@ namespace Pictionnary.Forms
             if(_isCurrentClientDrawing)
             {
                 Controls.Remove(_renderOnlyCanvas);
-                Controls.Add(_drawingCanvas);
+                Controls.Add(DrawingCanvas);
             }
             else
             {
-                Controls.Remove(_drawingCanvas);
+                Controls.Remove(DrawingCanvas);
                 Controls.Add(_renderOnlyCanvas);
             }
         }
@@ -132,6 +148,8 @@ namespace Pictionnary.Forms
 
         private void roundTimer_Tick(object sender, EventArgs e)
         {
+            NetworkingHelper.GetInstance().SendPointsToEverybody();
+
             gameProgressTime = DateTime.Now;
             timerTime = leftTime - (gameProgressTime - roundStartTime);
             lblTimer.Text = (timerTime.Minutes.ToString("0#") + ":" + timerTime.Seconds.ToString("0#"));
@@ -174,9 +192,8 @@ namespace Pictionnary.Forms
         {
             if(!_isCurrentClientDrawing)
             {
-                DrawingEditor.Drawing todraw = new DrawingEditor.Drawing();
                 DrawingEditor.PanelRenderer renderer = new DrawingEditor.PanelRenderer(_renderOnlyCanvas);
-                renderer.Render(todraw, e);
+                renderer.Render(_receivedDrawing, e);
             }
         }
     }

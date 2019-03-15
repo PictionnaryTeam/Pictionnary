@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DrawingEditor;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 
@@ -7,12 +8,12 @@ namespace Pictionnary.Networking.Objects.Packets.Client
     [Serializable]
     class ClientSendPointsPacket : Packet
     {
-        List<Point> _points;
-        public ClientSendPointsPacket(List<Point> points) : base(PacketType.CLIENTPACKETPING)
+        Drawing _points;
+        public ClientSendPointsPacket(Drawing points) : base(PacketType.CLIENTPACKETPING)
         {
             _points = points;
         }
 
-        public List<Point> Points { get => _points; set => _points = value; }
+        public Drawing Points { get => _points; set => _points = value; }
     }
 }

@@ -154,6 +154,7 @@
             this.Controls.Add(this.pnlTimer);
             this.Controls.Add(this.tbxChat);
             this.Controls.Add(this.pnlPlayers);
+            this.DoubleBuffered = true;
             this.Name = "GameView";
             this.Text = "                                                                                 " +
     "                                                             Game view";
