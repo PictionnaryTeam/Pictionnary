@@ -12,7 +12,6 @@ namespace PrototypeDessin
 {
     public partial class Form1 : Form
     {
-        PanelRenderer _renderer;
         DrawingCanvasTemplate _canvas;
 
         public Form1()
@@ -21,10 +20,7 @@ namespace PrototypeDessin
 
             SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
 
-            _renderer = new PanelRenderer(panel1);
-            timer1.Start();
-
-            _canvas = new DrawingCanvasOneLine();
+            _canvas = new DrawingCanvasNormalMode();
             _canvas.Location = new Point(10, 10);
 
             Controls.Add(_canvas);
@@ -45,13 +41,12 @@ namespace PrototypeDessin
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            panel1.Invalidate();
+            //panel1.Invalidate();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Drawing tmpDrawing = _canvas.GetDrawing();
-           _renderer.Render(tmpDrawing, e);
+            //Drawing tmpDrawing = _canvas.GetDrawing();
         }
     }
 }
