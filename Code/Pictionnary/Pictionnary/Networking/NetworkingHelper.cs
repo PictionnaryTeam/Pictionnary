@@ -189,6 +189,8 @@ namespace Pictionnary.Networking
             //Connected
             if (_server.Room != null)
             {
+                SendPointsToEverybody();
+
                 //Display message before send it
                 EventsManager.OnChatMessageReceive?.Invoke(new Objects.EventArgs.OnChatMessageReceiveEventArgs(Server.Pseudo, message, DateTime.Now));
             }
@@ -210,6 +212,14 @@ namespace Pictionnary.Networking
         
         public NetworkError SendPointsToEverybody()
         {
+            //Connected
+            if (_server.Room != null)
+            {
+                ClientsManager.SendPacketToEveryClients(new ClientSendPointsPacket(FormManager.gameView.DrawingCanvas.GetDrawing()));
+
+                return NetworkError.None;
+            }
+
             //Send packet and get response
             ServerResponsePacket response = TCPClient.SendPacket(new ClientSendPointsPacket(FormManager.gameView.DrawingCanvas.GetDrawing())) as ServerResponsePacket;
 
