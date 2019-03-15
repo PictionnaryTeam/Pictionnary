@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Drawing.cs" />
     <Compile Include="DrawingCanvasBlindMode.cs">
       <SubType>UserControl</SubType>

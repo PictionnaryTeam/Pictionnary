@@ -36,7 +36,7 @@
             this.btn_white = new System.Windows.Forms.Button();
             this.nud_brushSize = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnl_canvas = new System.Windows.Forms.Panel();
+            this.pnl_canvas = new Pictionnary.BufferedPanel();
             ((System.ComponentModel.ISupportInitialize)(this.nud_brushSize)).BeginInit();
             this.SuspendLayout();
             // 
@@ -180,6 +180,6 @@
         private System.Windows.Forms.Button btn_white;
         private System.Windows.Forms.NumericUpDown nud_brushSize;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnl_canvas;
+        private Pictionnary.BufferedPanel pnl_canvas;
     }
 }
