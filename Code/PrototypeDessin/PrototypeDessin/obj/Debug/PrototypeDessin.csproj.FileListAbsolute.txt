@@ -2,7 +2,6 @@ E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\b
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.exe
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\bin\Debug\PrototypeDessin.pdb
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csprojResolveAssemblyReference.cache
-E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.DrawingCanvas.resources
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.Form1.resources
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.Properties.Resources.resources
 E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csproj.GenerateResource.Cache
@@ -29,3 +28,5 @@ F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\o
 F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.exe
 F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.pdb
 F:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.DrawingCanvasTemplate.resources
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.DrawingCanvasTemplate.resources
+E:\PROJETS\Projets-ETML\Pictionnary\repos\Code\PrototypeDessin\PrototypeDessin\obj\Debug\PrototypeDessin.csproj.CoreCompileInputs.cache
